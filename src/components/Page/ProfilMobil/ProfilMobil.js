@@ -11,17 +11,7 @@ export default class ProfilMobil extends Component {
         <NavScroll />
         <div className="proifl">
           <CardSlide />
-          <ul>
-            <li>a</li>
-            <li>a</li>
-            <li>a</li>
-          </ul>
-          <ul>
-            <li>a</li>
-            <li>a</li>
-            <li>a</li>
-            <li>a</li>
-          </ul>
+          
         </div>
         <Lower />
       </>
