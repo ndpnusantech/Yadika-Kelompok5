@@ -1,0 +1,37 @@
+.containerSyarat {
+  margin: 10% auto 0 auto;
+  border-radius: 15px;
+  width: 1075px;
+  height: 480px;
+  background-color: #b7abc7;
+  padding: 5% 0;
+  text-align: center;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.containerSyarat .mainSyarat {
+  margin: auto;
+  width: 70%;
+  height: 5%;
+  text-align: left;
+}
+/* Syarat */
+/* About */
+.containerAbout {
+  border-radius: 15px;
+  width: 1075px;
+  height: 450px;
+  margin: 2% auto 0 auto;
+  padding-top: 3%;
+  background-color: #cbcbcb;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.containerAbout ul {
+  width: 70%;
+  margin: auto;
+}

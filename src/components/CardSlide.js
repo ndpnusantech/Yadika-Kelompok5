@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Button, Card } from 'react-bootstrap';
 
@@ -7,7 +8,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import '../components/css/cardSlider.css';
-import { data } from '../data/dataCard';
 
 export default function CardSlide() {
   return (
@@ -19,19 +19,116 @@ export default function CardSlide() {
           clickable: true,
         }}
         className="mySwiper"
-        style={{ width: '80%', height: '450px' }}
+        style={{ wight: '80%', height: '450px' }}
       >
-        {data.map((item) => (
-          <SwiperSlide key={item.id}>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={item.Img} />
-              <Card.Body>
-                <Card.Title>{item.Nama}</Card.Title>
-                <Button variant="dark">Rent Now </Button>
-              </Card.Body>
-            </Card>
-          </SwiperSlide>
-        ))}
+        <SwiperSlide>
+          <Card style={{ width: '18rem' }}>
+            <Card.Img
+              variant="top"
+              src="https://asset.kompas.com/crops/mXMD6sWaGHWJSkp1Lf9QlXgqsSI=/70x0:660x393/750x500/data/photo/2020/04/03/5e86fc907420a.jpg"
+            />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Button variant="dark">Rent Now </Button>
+            </Card.Body>
+          </Card>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card style={{ width: '18rem' }}>
+            <Card.Img
+              variant="top"
+              src="https://asset.kompas.com/crops/mXMD6sWaGHWJSkp1Lf9QlXgqsSI=/70x0:660x393/750x500/data/photo/2020/04/03/5e86fc907420a.jpg"
+            />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Button variant="dark">Rent Now </Button>
+            </Card.Body>
+          </Card>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card style={{ width: '18rem' }}>
+            <Card.Img
+              variant="top"
+              src="https://asset.kompas.com/crops/mXMD6sWaGHWJSkp1Lf9QlXgqsSI=/70x0:660x393/750x500/data/photo/2020/04/03/5e86fc907420a.jpg"
+            />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Button variant="dark">Rent Now </Button>
+            </Card.Body>
+          </Card>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card style={{ width: '18rem' }}>
+            <Card.Img
+              variant="top"
+              src="https://asset.kompas.com/crops/mXMD6sWaGHWJSkp1Lf9QlXgqsSI=/70x0:660x393/750x500/data/photo/2020/04/03/5e86fc907420a.jpg"
+            />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Button variant="dark">Rent Now </Button>
+            </Card.Body>
+          </Card>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card style={{ width: '18rem' }}>
+            <Card.Img
+              variant="top"
+              src="https://asset.kompas.com/crops/mXMD6sWaGHWJSkp1Lf9QlXgqsSI=/70x0:660x393/750x500/data/photo/2020/04/03/5e86fc907420a.jpg"
+            />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Button variant="dark">Rent Now </Button>
+            </Card.Body>
+          </Card>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card style={{ width: '18rem' }}>
+            <Card.Img
+              variant="top"
+              src="https://asset.kompas.com/crops/mXMD6sWaGHWJSkp1Lf9QlXgqsSI=/70x0:660x393/750x500/data/photo/2020/04/03/5e86fc907420a.jpg"
+            />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Button variant="dark">Rent Now </Button>
+            </Card.Body>
+          </Card>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card style={{ width: '18rem' }}>
+            <Card.Img
+              variant="top"
+              src="https://asset.kompas.com/crops/mXMD6sWaGHWJSkp1Lf9QlXgqsSI=/70x0:660x393/750x500/data/photo/2020/04/03/5e86fc907420a.jpg"
+            />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Button variant="dark">Rent Now </Button>
+            </Card.Body>
+          </Card>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card style={{ width: '18rem' }}>
+            <Card.Img
+              variant="top"
+              src="https://asset.kompas.com/crops/mXMD6sWaGHWJSkp1Lf9QlXgqsSI=/70x0:660x393/750x500/data/photo/2020/04/03/5e86fc907420a.jpg"
+            />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Button variant="dark">Rent Now </Button>
+            </Card.Body>
+          </Card>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card style={{ width: '18rem' }}>
+            <Card.Img
+              variant="top"
+              src="https://asset.kompas.com/crops/mXMD6sWaGHWJSkp1Lf9QlXgqsSI=/70x0:660x393/750x500/data/photo/2020/04/03/5e86fc907420a.jpg"
+            />
+            <Card.Body>
+              <Card.Title>Card Title</Card.Title>
+              <Button variant="dark">Rent Now </Button>
+            </Card.Body>
+          </Card>
+        </SwiperSlide>
       </Swiper>
     </>
   );
