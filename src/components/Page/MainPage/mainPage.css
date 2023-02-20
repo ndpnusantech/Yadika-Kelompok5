@@ -1,0 +1,15 @@
+.CardSlide h1,
+.see {
+  justify-items: center;
+}
+.CardSlide h1 {
+  padding: 90px 0 0 167px;
+}
+.CardSlide .see {
+  margin-left: 75%;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
