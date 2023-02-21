@@ -2,7 +2,6 @@ import { Container, Nav, Navbar, Dropdown } from 'react-bootstrap';
 import Logo from './logo.png';
 import React, { Component } from 'react';
 import '../components/css/navbar.css';
-// import ProfilMobil from './Page/ProfilMobil/ProfilMobil';
 
 function NavScroll() {
   return (
@@ -55,6 +54,7 @@ function NavScroll() {
               >
                 <Dropdown.Item href="#/action-1">Register</Dropdown.Item>
                 <Dropdown.Item href="#/action-2">Login</Dropdown.Item>
+                <Dropdown.Item href="/editUser">Edit User</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Nav.Item>
