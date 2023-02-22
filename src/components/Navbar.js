@@ -5,7 +5,11 @@ import '../components/css/navbar.css';
 
 function NavScroll() {
   return (
-    <Navbar style={{ backgroundColor: '#E5E5E5' }} expand="lg">
+    <Navbar
+      className="Navbarr"
+      style={{ backgroundColor: '#E5E5E5' }}
+      expand="lg"
+    >
       <Container fluid>
         <Navbar.Brand href="#">
           <img src={Logo} style={{ wight: '40px', height: '40px' }} />
@@ -52,7 +56,7 @@ function NavScroll() {
               <Dropdown.Menu
                 style={{ transform: 'translateX(-50px)', width: '50px' }}
               >
-                <Dropdown.Item href="#/action-1">Register</Dropdown.Item>
+                <Dropdown.Item href="/RegisPage">Register</Dropdown.Item>
                 <Dropdown.Item href="#/action-2">Login</Dropdown.Item>
                 <Dropdown.Item href="/editUser">Edit User</Dropdown.Item>
               </Dropdown.Menu>

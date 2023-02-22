@@ -1,6 +1,6 @@
 import NavScroll from '../../Navbar';
 import Lower from '../../Footer';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
 import { Button, Card } from 'react-bootstrap';
 import 'swiper/css';
 import 'swiper/css/pagination';

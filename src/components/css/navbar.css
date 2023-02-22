@@ -9,3 +9,8 @@
   box-shadow: 0 -3px 0px white inset, 400px 0 0 rgba(255, 255, 225, 0.03) inset;
   padding: 7px 25px 15px 25px;
 }
+.Navbarr {
+  box-shadow: 10px 10px 1px black;
+  padding-top: 2%;
+  margin-bottom: 10%;
+}

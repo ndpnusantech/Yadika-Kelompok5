@@ -4,11 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faBars,
-  faSignOutAlt,
-  faUserEdit,
-} from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { Button } from 'react-bootstrap';
 import Logo from './logo.png';
@@ -43,7 +39,12 @@ function OffcanvasExample() {
         </Container>
       </Navbar>
       <div className="sidebar">
-        <Nav className="flex-column">
+        <img
+          src={Logo}
+          alt="Logo"
+          style={{ height: '70px', paddingLeft: '50px', paddingBottom: '20px' }}
+        />
+        <Nav className="flex-column nav-center">
           <Nav.Link href="/" className="home-link">
             <FontAwesomeIcon icon={faHome} />
             <span className="home-text">Home</span>
@@ -55,7 +56,9 @@ function OffcanvasExample() {
         </Nav>
       </div>
       <div className="profile-container">
-        <div className="profile-image"></div>
+        <div className="profile-image">
+          <button className="edit-picture-button">Edit</button>
+        </div>
         <div className="profile-info">
           <h3>Name</h3>
           <p>Email</p>
@@ -70,6 +73,7 @@ function OffcanvasExample() {
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
             <img
+              className="logo"
               src={Logo}
               alt="Logo"
               style={{ height: '70px', width: '70px' }}
@@ -89,7 +93,7 @@ function OffcanvasExample() {
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>
-      <div className="editProfile">
+      <div className="editProfileButton">
         <p>Ganti Nama Anda</p>
         <p>Ganti No Telp Anda</p>
         <p>Save</p>
