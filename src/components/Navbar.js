@@ -13,7 +13,7 @@ function NavScroll() {
     >
       <Container fluid>
         <Navbar.Brand href="#">
-          <img src={Logo} style={{ wight: '40px', height: '40px' }} />
+          {/* <img src={Logo} style={{ wight: '40px', height: '40px' }} /> */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Nav className="justify-content-end nav" activeKey="/home">
@@ -28,9 +28,9 @@ function NavScroll() {
           </Nav.Item>
           <Nav.Item>
             <Nav.Link
-              href="/ProfilMobil"
+              href="/CarItem"
               className="hove"
-              eventKey="RegisPage"
+              eventKey="CarItem"
               style={{ color: 'black', fontSize: '20px' }}
             >
               Rent Now
