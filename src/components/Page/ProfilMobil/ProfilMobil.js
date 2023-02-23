@@ -1,12 +1,9 @@
 import NavScroll from '../../Navbar';
 import Lower from '../../Footer';
-import { SwiperSlide } from 'swiper/react';
-import { Button, Card } from 'react-bootstrap';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import './cardSlider.css';
+import './profilMobil.css';
+import ListGroup from 'react-bootstrap/ListGroup';
 
-import { dataMobil } from '../../../data/dataMobil/dataAvanza';
+import { dataMobil, AboutCar } from '../../../data/dataMobil/dataAvanza';
 
 import React, { Component } from 'react';
 
@@ -15,20 +12,33 @@ export default class ProfilMobil extends Component {
     return (
       <>
         <NavScroll />
-        <div className="profile">
-          {dataMobil.map((data) => {
-            return (
-              <SwiperSlide id={data.id}>
-                <Card style={{ width: '18rem' }}>
-                  <Card.Img variant="top" src={data.Img} />
-                  <Card.Body>
-                    <Card.Title>{data.Nama}</Card.Title>
-                    <Button variant="dark">Rent Now</Button>
-                  </Card.Body>
-                </Card>
-              </SwiperSlide>
-            );
-          })}
+        <div className="profileMobilCon ">
+          {dataMobil.map((data, index) => (
+            <div className="d-flex ">
+              <img
+                alt=""
+                className="imgMobil mt-5"
+                variant="top"
+                src={data.Img}
+              />
+              <div>
+                {index === 0 && (
+                  <ListGroup
+                    id={AboutCar[index].id}
+                    className="my-list-group"
+                    style={{}}
+                  >
+                    <ListGroup.Item>
+                      Plat Nomor : {AboutCar[index].plat}
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                      Jenis Bensin : {AboutCar[index].bensin}
+                    </ListGroup.Item>
+                  </ListGroup>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
         <Lower />
       </>

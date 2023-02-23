@@ -57,11 +57,12 @@ function OffcanvasExample() {
       </div>
       <div className="profile-container">
         <div className="profile-image">
-          <button className="edit-picture-button">Edit</button>
+          <Button className="edit-picture-button">Edit</Button>
         </div>
         <div className="profile-info">
-          <h3>Name</h3>
-          <p>Email</p>
+          <h3 id="nameProfil">Name</h3>
+          <p id="emailProfile">Email</p>
+          <p id="noProfile">No telp</p>
         </div>
       </div>
       <Offcanvas

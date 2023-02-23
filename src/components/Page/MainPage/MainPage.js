@@ -36,36 +36,7 @@ export default class Mainpage extends Component {
             <img src="https://telset.id/wp-content/uploads/2016/07/google-maps-new-interface1.jpg" />
           </div>
         </div>
-        <section className="SYARAT">
-          <div className="containerSyarat">
-            <h1>Persyaratan Rental</h1>
-            <div className="mainSyarat">
-              <div className="card" style={{ height: '300px' }}>
-                <div className="card-header">Feature</div>
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item">
-                    Umur minimal 21 tahun, dengan masa berkendara minimal 1
-                    tahun.
-                  </li>
-                  <li className="list-group-item">
-                    Memiliki SIM (Surat Izin Mengemudi) yang masih berlaku.
-                  </li>
-                  <li className="list-group-item">
-                    Menunjukkan kartu identitas yang masih berlaku, seperti KTP
-                    atau paspor.
-                  </li>
-                  <li className="list-group-item">
-                    Melakukan pembayaran deposit
-                  </li>
-                  <li className="list-group-item">
-                    Membaca dan menyetujui syarat dan ketentuan sewa mobil yang
-                    diberikan oleh perusahaan.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+
         <section className="ABOUT" id="#">
           <div className="containerAbout">
             <h1 style={{ textAlign: 'center' }}>Tentang Kami</h1>

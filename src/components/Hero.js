@@ -16,7 +16,7 @@ function CarouselSlider() {
                   margin: 'auto',
                   borderRadius: '15px',
                   width: '100%',
-                  height: '545px',
+                  height: '565px',
                   marginBottom: '3%',
                   objectFit: 'cover',
                 }}

@@ -1,0 +1,16 @@
+.profileMobilCon {
+  display: flex;
+  width: 95%;
+  margin: auto;
+}
+.my-list-group {
+  margin-left: 10%;
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 30px;
+}
+.imgMobil {
+  width: 900px;
+  margin-top: 20px;
+  border-radius: 10px;
+}

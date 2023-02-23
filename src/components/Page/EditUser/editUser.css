@@ -95,9 +95,13 @@
 }
 .editProfileButton {
   padding-top: 5%;
-  padding-bottom: 5%;
+  padding-bottom: 4%;
   padding-left: 25%;
   background-color: rgb(179, 177, 177);
+}
+.editTextButton {
+  margin-left: 2%;
+  height: 35px;
 }
 .profile-info {
   text-align: center;
@@ -112,11 +116,9 @@
   margin-bottom: 10px;
 }
 .edit-picture-button {
-  width: 100px;
-  height: 50px;
   position: absolute;
-  bottom: 455px;
-  right: 450px;
+  bottom: 540px;
+  right: 530px;
   background-color: rgb(117, 49, 49);
   border: 1px solid #ccc;
   border-radius: 15px;
@@ -163,7 +165,7 @@
     margin-left: 250px;
   }
   .edit-picture-button {
-    bottom: 245px;
+    bottom: 310px;
     right: 120px;
   }
   .logout-link {

@@ -4,6 +4,7 @@ import ProfilMobil from './components/Page/ProfilMobil/ProfilMobil';
 import EditUser from './components/Page/EditUser/editUser';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Register from './components/Page/RegisPage/RegisPage';
+import SyrtKntuan from './components/Page/SK/SyrtKntuan';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/profilMobil" element={<ProfilMobil />} />
         <Route path="/editUser" element={<EditUser />} />
         <Route path="/regisPage" element={<Register />} />
+        <Route path="/SyrtKntuan" element={<SyrtKntuan />} />
       </Routes>
     </BrowserRouter>
   );

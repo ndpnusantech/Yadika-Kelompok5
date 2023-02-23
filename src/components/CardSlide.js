@@ -21,12 +21,14 @@ export default function CardSlide() {
       >
         {data.map((data) => {
           return (
-            <SwiperSlide id={data.id}>
+            <SwiperSlide>
               <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={data.Img} />
                 <Card.Body>
                   <Card.Title>{data.Nama}</Card.Title>
-                  <Button variant="dark">Rent Now</Button>
+                  <Button id={data.id} variant="dark" href="/ProfilMobil">
+                    Rent Now
+                  </Button>
                 </Card.Body>
               </Card>
             </SwiperSlide>
