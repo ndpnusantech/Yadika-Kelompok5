@@ -14,8 +14,6 @@ function App() {
         <Route path="/editUser" element={<EditUser />} />
         <Route path="/regisPage" element={<Register />} />
         <Route path="/SyrtKntuan" element={<SyrtKntuan />} />
-        <Route path="/CarItem" element={<CarItem />} />
-
       </Routes>
     </BrowserRouter>
   );

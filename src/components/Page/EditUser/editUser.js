@@ -74,7 +74,7 @@ function OffcanvasExample() {
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
             <img
-              className="logo"
+              className="logoEditProfile"
               src={Logo}
               alt="Logo"
               style={{ height: '70px', width: '70px' }}

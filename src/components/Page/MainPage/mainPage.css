@@ -1,23 +1,17 @@
-.CardSlide h1,
-.see {
-  justify-items: center;
+.carSlideSee {
+  width: 80%;
+  margin: 5% auto;
+  justify-content: space-between;
 }
-.CardSlide h1 {
-  padding: 90px 0 0 167px;
+.carSlideSee .see {
+  height: 40px;
 }
-.CardSlide .see {
-  margin-left: 75%;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-}
+
 /* About */
 .containerAbout {
   border-radius: 15px;
   width: 1075px;
-  height: 450px;
+  height: 760px;
   margin: 2% auto 0 auto;
   padding-top: 3%;
   background-color: #cbcbcb;
@@ -26,27 +20,31 @@
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
-.containerAbout ul {
+.aboutGroup {
+  width: 100%;
+}
+
+.aboutGroup ul li {
+  text-align: center;
   width: 70%;
-  margin: auto;
+  padding: 5% 2%;
+  margin: 0 auto;
+  height: 300px;
+}
+.aboutGroup .aboutImg {
+  padding-top: 17%;
+  padding-right: 10px;
+  transition: all 0.6s ease;
+}
+.aboutGroup .aboutImg:hover {
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
 }
 /* About */
-.containerAbout {
-  border-radius: 15px;
-  width: 1075px;
-  height: 450px;
-  margin: 2% auto 0 auto;
-  padding-top: 3%;
-  background-color: #cbcbcb;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-}
-.containerAbout ul {
-  width: 70%;
-  margin: auto;
-}
+
 /* maps */
 .right img {
   width: 100%;
