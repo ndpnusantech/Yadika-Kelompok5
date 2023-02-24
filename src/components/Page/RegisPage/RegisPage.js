@@ -55,7 +55,7 @@ function Register() {
           </p>
         </div>
         <div className="image">
-          <img className="logoRegis" src={Def} />
+          <img alt="" className="logoRegis" src={Def} />
         </div>
       </div>
     </div>

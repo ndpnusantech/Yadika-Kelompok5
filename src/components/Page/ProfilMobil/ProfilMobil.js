@@ -2,9 +2,7 @@ import NavScroll from '../../Navbar';
 import Lower from '../../Footer';
 import './profilMobil.css';
 import ListGroup from 'react-bootstrap/ListGroup';
-
-import { dataMobil, AboutCar } from '../../../data/dataMobil/dataAvanza';
-
+import { carData } from '../../../data/dataMobil';
 import React, { Component } from 'react';
 
 export default class ProfilMobil extends Component {
@@ -13,32 +11,29 @@ export default class ProfilMobil extends Component {
       <>
         <NavScroll />
         <div className="profileMobilCon ">
-          {dataMobil.map((data, index) => (
+          {carData.map((data, index) => (
             <div className="d-flex ">
-              <img
-                alt=""
-                className="imgMobil mt-5"
-                variant="top"
-                src={data.Img}
-              />
+              {index === 0 && (
+                <img
+                  alt=""
+                  className="imgMobil mt-5"
+                  variant="top"
+                  src={data.img}
+                />
+              )}
               <div>
                 {index === 0 && (
-                  <ListGroup
-                    id={AboutCar[index].id}
-                    className="my-list-group"
-                    style={{}}
-                  >
-                    <ListGroup.Item>
-                      Plat Nomor : {AboutCar[index].plat}
-                    </ListGroup.Item>
-                    <ListGroup.Item>
-                      Jenis Bensin : {AboutCar[index].bensin}
-                    </ListGroup.Item>
+                  <ListGroup id={data.id} className="my-list-group">
+                    <ListGroup.Item>Mama Mobil : {data.carName}</ListGroup.Item>
+                    <ListGroup.Item>Plat Nomor : {data.plat}</ListGroup.Item>
+                    <ListGroup.Item>Jenis Bensin : {data.oil}</ListGroup.Item>
+                    <ListGroup.Item>Kapasitas : {data.capacity}</ListGroup.Item>
                   </ListGroup>
                 )}
               </div>
             </div>
           ))}
+          <button className="profileRent">Rent Now</button>
         </div>
         <Lower />
       </>

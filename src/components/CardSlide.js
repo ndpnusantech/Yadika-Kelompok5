@@ -4,7 +4,7 @@ import { Button, Card } from 'react-bootstrap';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import '../components/css/cardSlider.css';
-import { data } from '../data/dataCard';
+import { carData } from '../data/dataMobil';
 
 export default function CardSlide() {
   return (
@@ -17,17 +17,17 @@ export default function CardSlide() {
         }}
         className="mySwiper"
         style={{ width: '80%', height: '450px' }}
-        touchEventsTarget="wrapper" // agar slider bisa digeser dengan touchpad
+        touchEventsTarget="wrapper"
       >
-        {data.map((data) => {
+        {carData.map((data) => {
           return (
             <SwiperSlide>
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={data.Img} />
+                <Card.Img className="slideImg" variant="top" src={data.img} />
                 <Card.Body>
-                  <Card.Title>{data.Nama}</Card.Title>
+                  <Card.Title>{data.carName}</Card.Title>
                   <Button id={data.id} variant="dark" href="/ProfilMobil">
-                    Rent Now
+                    Details
                   </Button>
                 </Card.Body>
               </Card>

@@ -1,19 +1,14 @@
 import { Container, Nav, Navbar, Dropdown } from 'react-bootstrap';
-import Logo from './logo.png';
 import React from 'react';
 import '../components/css/navbar.css';
+import Logo from './logo.png';
 
 function NavScroll() {
   return (
-    <Navbar
-      fixed="top"
-      className="Navbarr "
-      style={{ backgroundColor: '#E5E5E5' }}
-      expand="lg"
-    >
+    <Navbar fixed="top" className="Navbarr" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">
-          {/* <img src={Logo} style={{ wight: '40px', height: '40px' }} /> */}
+          <img alt="" src={Logo} style={{ wight: '40px', height: '40px' }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Nav className="justify-content-end nav" activeKey="/home">
@@ -30,7 +25,7 @@ function NavScroll() {
             <Nav.Link
               href="/CarItem"
               className="hove"
-              eventKey="CarItem"
+              eventKey="link-3"
               style={{ color: 'black', fontSize: '20px' }}
             >
               Rent Now

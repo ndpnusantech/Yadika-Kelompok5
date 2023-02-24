@@ -5,6 +5,7 @@ import EditUser from './components/Page/EditUser/editUser';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Register from './components/Page/RegisPage/RegisPage';
 import SyrtKntuan from './components/Page/SK/SyrtKntuan';
+import CarItem from './components/Page/CarItem/CarItem';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/editUser" element={<EditUser />} />
         <Route path="/regisPage" element={<Register />} />
         <Route path="/SyrtKntuan" element={<SyrtKntuan />} />
+        <Route path="/CarItem" element={<CarItem />} />
       </Routes>
     </BrowserRouter>
   );
