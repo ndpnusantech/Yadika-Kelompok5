@@ -4,6 +4,7 @@ import './profilMobil.css';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { carData } from '../../../data/dataMobil';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class ProfilMobil extends Component {
   render() {
@@ -33,7 +34,9 @@ export default class ProfilMobil extends Component {
               </div>
             </div>
           ))}
-          <button className="profileRent">Rent Now</button>
+          <button className="profileRent">
+            <Link to="/CheckOut">Rent Now</Link>
+          </button>
         </div>
         <Lower />
       </>

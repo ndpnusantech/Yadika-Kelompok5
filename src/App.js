@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Register from './components/Page/RegisPage/RegisPage';
 import SyrtKntuan from './components/Page/SK/SyrtKntuan';
 import CarItem from './components/Page/CarItem/CarItem';
+import CheckOut from './components/Page/CheckOut/CheckOut';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/regisPage" element={<Register />} />
         <Route path="/SyrtKntuan" element={<SyrtKntuan />} />
         <Route path="/CarItem" element={<CarItem />} />
+        <Route path="/CheckOut" element={<CheckOut />} />
       </Routes>
     </BrowserRouter>
   );

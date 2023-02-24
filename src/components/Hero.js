@@ -18,8 +18,6 @@ function CarouselSlider() {
                   paddingTop: '5%',
                   width: '100%',
                   height: '695px',
-                  filter: 'blur(1px)',
-                  filter: 'brightness(.4)',
                 }}
               />
             </Carousel.Item>
