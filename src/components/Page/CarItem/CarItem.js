@@ -26,7 +26,8 @@ const CarItem = () => {
                     <h4 className="section-title text-center">{carName}</h4>
                     <h6 className="rent-price text-center mt-">
                       {' '}
-                      Rp.{price}.000<span>/ Jam</span>
+                      Rp.{price}
+                      <span>/ Jam</span>
                     </h6>
 
                     <div className="car-item-info d-flex align-items-center justify-content-between mt-3 mb-4">
@@ -45,7 +46,7 @@ const CarItem = () => {
                     </div>
 
                     <button className="w-50 car-item-btn car-btn-rent">
-                      <Link to="/profilMobil">Details</Link>
+                      <Link to="/ProfilMobil">Details</Link>
                     </button>
                   </div>
                 </div>

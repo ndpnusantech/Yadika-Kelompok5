@@ -2,6 +2,7 @@ import NavScroll from '../../Navbar';
 import Lower from '../../Footer';
 import React from 'react';
 import './syartKntuan.css';
+import { Card } from 'react-bootstrap';
 
 const SyrtKntuan = () => {
   return (
@@ -10,7 +11,6 @@ const SyrtKntuan = () => {
       <section className="SYARAT">
         <div className="containerSyarat">
           <h1>Persyaratan Rental</h1>
-
           <div className="mainSyarat">
             <div className="card" style={{ height: '300px' }}>
               <div className="card-header"></div>
@@ -37,6 +37,18 @@ const SyrtKntuan = () => {
                 </li>
               </ul>
             </div>
+          </div>
+          <div className="jaminanRent">
+            <Card style={{ width: '1080px' }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
           </div>
         </div>
       </section>

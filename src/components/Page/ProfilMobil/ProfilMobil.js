@@ -34,9 +34,9 @@ export default class ProfilMobil extends Component {
               </div>
             </div>
           ))}
-          <button className="profileRent">
-            <Link to="/CheckOut">Rent Now</Link>
-          </button>
+          <Link to={'/CheckOut'}>
+            <button className="profileRent">Rent Now</button>
+          </Link>
         </div>
         <Lower />
       </>
