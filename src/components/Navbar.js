@@ -28,7 +28,7 @@ function NavScroll() {
               eventKey="link-3"
               style={{ color: 'black', fontSize: '20px' }}
             >
-              Rent Now
+              Daftar Mobil
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
