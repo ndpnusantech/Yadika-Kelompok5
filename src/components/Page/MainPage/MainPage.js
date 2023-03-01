@@ -50,7 +50,7 @@ export default class Mainpage extends Component {
             <hr />
             <div className="aboutGroup d-flex">
               <ul className="list-group">
-                <li className="list-group-item">
+                <li className="list-group-item" style={{ textAlign: 'left' }}>
                   Kami adalah perusahaan rental mobil yang berdedikasi untuk
                   memberikan pengalaman bepergian yang nyaman dan mudah bagi
                   pelanggan kami. Kami memahami bahwa setiap perjalanan memiliki
@@ -59,7 +59,7 @@ export default class Mainpage extends Component {
                   dengan kebutuhan pelanggan kami.
                 </li>
                 <br />
-                <li className="list-group-item">
+                <li className="list-group-item" style={{ textAlign: 'left' }}>
                   Dengan lebih dari 90 tahun pengalaman di bidang ini, kami
                   memiliki tim yang berdedikasi dan profesional yang selalu siap
                   untuk membantu pelanggan kami. Kami bangga dengan standar

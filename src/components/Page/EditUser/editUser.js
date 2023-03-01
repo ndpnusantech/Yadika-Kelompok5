@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { Button } from 'react-bootstrap';
+import { Button, FormControl } from 'react-bootstrap';
 import Logo from './logo.png';
 import './editUser.css';
 
@@ -60,9 +60,9 @@ function OffcanvasExample() {
           <Button className="edit-picture-button">Edit</Button>
         </div>
         <div className="profile-info">
-          <h3 id="nameProfil">Name</h3>
-          <p id="emailProfile">Email</p>
-          <p id="noProfile">No telp</p>
+          <h3 id="nameProfil">John Doe</h3>
+          <p id="emailProfile">JohnDoe@gmail.com</p>
+          <p id="noProfile">+62 123 234 345</p>
         </div>
       </div>
       <Offcanvas
@@ -95,9 +95,17 @@ function OffcanvasExample() {
         </Offcanvas.Body>
       </Offcanvas>
       <div className="editProfileButton">
-        <p>Ganti Nama Anda</p>
-        <p>Ganti No Telp Anda</p>
-        <p>Save</p>
+        <input
+          type={'text'}
+          className="editProfileInput"
+          placeholder="Nama Baru"
+        />
+        <input
+          type={'text'}
+          className="editProfileInput"
+          placeholder="No Telp Baru"
+        />
+        <Button variant="primary">Save</Button>{' '}
       </div>
     </>
   );

@@ -57,7 +57,7 @@ export default function Lower() {
               <p></p>
             </MDBCol>
             <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Layanan</h6>
+              <h6 className="text-uppercase fw-bold mb-4">Menu</h6>
               <p>
                 <a href="#!" className="text-reset">
                   Order Now
@@ -71,6 +71,16 @@ export default function Lower() {
               <p>
                 <a href="#!" className="text-reset">
                   Register
+                </a>
+              </p>
+              <p>
+                <a href="#!" className="text-reset">
+                  F A Q
+                </a>
+              </p>
+              <p>
+                <a href="#" className="text-reset">
+                  Testimoni Kami
                 </a>
               </p>
             </MDBCol>

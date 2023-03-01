@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
-import { Card, ListGroup } from 'react-bootstrap';
+import { Card, ListGroup, Button } from 'react-bootstrap';
 import NavScroll from '../../Navbar';
 import Lower from '../../Footer';
 import './checkOut.css';
@@ -121,6 +121,7 @@ export default function CheckOut() {
                 <th>Tanggal Pengembalian</th>
                 <th>Jumlah Hari</th>
                 <th>Total Harga</th>
+                <th>Jenis Pembayaran</th>
               </tr>
             </thead>
             <tbody>
@@ -135,6 +136,20 @@ export default function CheckOut() {
                     ((returnDate - pickupDate) / (1000 * 60 * 60 * 24)) *
                     carData.find((car) => car.carName === selectedOption).price
                   ).toLocaleString()}
+                </td>
+                <td>
+                  <select id="payment-method">
+                    <option value="cash">Tunai</option>
+                    <option value="credit-card">Kartu Kredit</option>
+                    <option value="debit-card">Kartu Debit</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td colSpan="7" style={{ textAlign: 'center' }}>
+                  <Button style={{ margin: 'auto', display: 'block' }}>
+                    Konfirmasi
+                  </Button>
                 </td>
               </tr>
             </tbody>

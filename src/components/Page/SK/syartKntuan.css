@@ -1,22 +1,37 @@
 /* Syarat */
+.bodySk {
+  background-color: rgb(71, 7, 7);
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: #b7abc7;
+}
 .containerSyarat {
   margin: 5% auto 0 auto;
   border-radius: 15px;
   width: 1075px;
-  height: 480px;
-  background-color: #b7abc7;
   padding: 5% 0;
   text-align: center;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
   margin-top: 8%;
+  background-color: #b7abc7;
 }
-.containerSyarat .mainSyarat {
-  margin: auto;
-  width: 70%;
-  height: 5%;
-  text-align: left;
+
+.containerSyarat .jaminanRent {
+  margin-top: 2%;
 }
-/* Syarat */
+.layoutSK {
+  margin: 8% auto 0 auto;
+  width: 100%;
+  background-color: #cec8d5;
+  display: flex;
+}
+.layoutSK h3 {
+  padding-top: 150px;
+  padding: 110px 70px 15px 70px;
+}
+.layoutSK img {
+  margin-right: 60px;
+  filter: brightness(0.7);
+  -webkit-filter: brightness(0.7);
+}
