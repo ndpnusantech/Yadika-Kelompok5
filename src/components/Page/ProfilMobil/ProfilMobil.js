@@ -25,9 +25,12 @@ export default class ProfilMobil extends Component {
               <div>
                 {index === 0 && (
                   <ListGroup id={data.id} className="my-list-group">
+                    <ListGroup.Item>Brand : {data.brand}</ListGroup.Item>
                     <ListGroup.Item>Mama Mobil : {data.carName}</ListGroup.Item>
                     <ListGroup.Item>Jenis Bensin : {data.oil}</ListGroup.Item>
                     <ListGroup.Item>Kapasitas : {data.capacity}</ListGroup.Item>
+                    <ListGroup.Item>Kecepatan : {data.speed}</ListGroup.Item>
+                    <ListGroup.Item>Harga : Rp {data.price}</ListGroup.Item>
                   </ListGroup>
                 )}
               </div>
