@@ -6,15 +6,26 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { Button, FormControl } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import Logo from './logo.png';
 import './editUser.css';
 
+
 function OffcanvasExample() {
   const [show, setShow] = useState(false);
+  const [name, setName] = useState('John Doe');
+  const [phone, setPhone] = useState('+62 123 234 345');
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  }
+
+  const handlePhoneChange = (event) => {
+    setPhone(event.target.value);
+  }
 
   return (
     <>
@@ -60,9 +71,9 @@ function OffcanvasExample() {
           <Button className="edit-picture-button">Edit</Button>
         </div>
         <div className="profile-info">
-          <h3 id="nameProfil">John Doe</h3>
+          <h3 id="nameProfil">{name}</h3>
           <p id="emailProfile">JohnDoe@gmail.com</p>
-          <p id="noProfile">+62 123 234 345</p>
+          <p id="noProfile">{phone}</p>
         </div>
       </div>
       <Offcanvas
@@ -94,21 +105,35 @@ function OffcanvasExample() {
           </Nav>
         </Offcanvas.Body>
       </Offcanvas>
-      <div className="editProfileButton">
-        <input
-          type={'text'}
-          className="editProfileInput"
-          placeholder="Nama Baru"
-        />
-        <input
-          type={'text'}
-          className="editProfileInput"
-          placeholder="No Telp Baru"
-        />
-        <Button variant="primary">Save</Button>{' '}
+      <div className="edit-profile-container">
+        <h2 style={{textAlign:'center'}}>Edit Profile</h2>
+        <form>
+          <div className="form-group">
+            <input
+            placeholder='Edit Name'
+              type="text"
+              className="form-control"
+              id="nameInput"
+              value={name}
+              onChange={handleNameChange}
+            />
+          </div>
+          <div className="form-group">
+            <input
+            placeholder='Phone Number'
+              type="text"
+              className="form-control"
+              id="phoneInput"
+              value={phone}
+              onChange={handlePhoneChange}
+            />
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Save Changes
+          </button>
+        </form>
       </div>
     </>
   );
 }
-
 export default OffcanvasExample;
