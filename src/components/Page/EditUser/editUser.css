@@ -107,21 +107,18 @@
   padding: 44px 0 50px 25%;
   background-color: rgb(179, 177, 177);
 }
-.editProfileInput {
-  width: 40px; /* atur lebar form control menjadi 200px */
-}
-
 .editTextButton {
   margin-left: 2%;
   height: 35px;
 }
 .profile-info {
   text-align: center;
+  height: 135px;
+}
+.form-group{
+  margin: 10px;
 }
 
-.edit-profile-link {
-  display: none;
-}
 .edit-profile-text {
   margin-left: 300px;
   font-size: 30px;
@@ -129,18 +126,13 @@
 }
 .edit-picture-button {
   position: absolute;
-  bottom: 400px;
-  right: 430px;
-  background-color: rgb(117, 49, 49);
-  border: 1px solid #ccc;
-  border-radius: 15px;
+  bottom: 460px;
+  right: 470px;
+  width: 80px;
+  height: 45px;
   padding: 5px;
-  font-size: 12px;
+  font-size: 18px;
   cursor: pointer;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
 }
 .nav-center {
   display: flex;
