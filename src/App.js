@@ -24,4 +24,6 @@ function App() {
   );
 }
 
+console.log('Akmal');
+
 export default App;
