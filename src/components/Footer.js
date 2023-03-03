@@ -74,7 +74,7 @@ export default function Lower() {
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-reset">
+                <a href="/Faq" className="text-reset">
                   F A Q
                 </a>
               </p>

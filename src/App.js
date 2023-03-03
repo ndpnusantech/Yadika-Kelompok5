@@ -7,6 +7,7 @@ import SyrtKntuan from './components/Page/SK/SyrtKntuan';
 import CarItem from './components/Page/CarItem/CarItem';
 import CheckOut from './components/Page/CheckOut/CheckOut';
 import ProfilMobil from './components/Page/ProfilMobil/ProfilMobil';
+import Faq from './components/Page/Faq/Faq';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/CarItem" element={<CarItem />} />
         <Route path="/profilMobil" element={<ProfilMobil />} />
         <Route path="/CheckOut" element={<CheckOut />} />
+        <Route path="/Faq" element={<Faq />} />
       </Routes>
     </BrowserRouter>
   );
