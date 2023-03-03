@@ -26,6 +26,6 @@ function App() {
   );
 }
 
-console.log('Akmal');
+console.log('Akmal ganteng');
 
 export default App;
