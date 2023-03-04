@@ -54,7 +54,7 @@ function NavScroll() {
                 style={{ transform: 'translateX(-50px)', width: '50px' }}
               >
                 <Dropdown.Item href="/RegisPage">Register</Dropdown.Item>
-                <Dropdown.Item href="/#">Login</Dropdown.Item>
+                <Dropdown.Item href="/Login">Login</Dropdown.Item>
                 <Dropdown.Item href="/editUser">Edit User</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

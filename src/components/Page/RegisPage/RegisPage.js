@@ -7,7 +7,7 @@ function Register() {
     <div className="main">
       <div className="ccontainer">
         <div className="input-login">
-          <h1 className="title">Register</h1>
+          <h1 className="title" style={{fontSize:"2rem"}}>Register</h1>
           <form action="">
             <input
               type="text"
@@ -38,12 +38,12 @@ function Register() {
               id="password"
             />
             <br />
-            <input
+            {/* <input
               type="password"
               className="input"
               placeholder="password"
               id="password"
-            />
+            /> */}
 
             <br />
             <button type="button" className="btn" onclick="regis()">
@@ -51,7 +51,7 @@ function Register() {
             </button>
           </form>
           <p className="log">
-            Sudah Punya Akun? <a href="index.html">Login</a>
+            Sudah Punya Akun? <a href="/Login">Login</a>
           </p>
         </div>
         <div className="image">
