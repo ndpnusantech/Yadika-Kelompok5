@@ -72,6 +72,7 @@ export default class Mainpage extends Component {
                 <img
                   src="./img/cars-img/tesla-model3.png"
                   style={{ height: '250px', widht: '250px' }}
+                  alt="tesla"
                 />
               </div>
             </div>
