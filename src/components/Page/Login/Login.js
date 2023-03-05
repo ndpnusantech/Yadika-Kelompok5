@@ -1,45 +1,36 @@
 import React from 'react';
-import Def from './def.png';
-import './login.css';
+import './Login.css';
 
-function Register() {
-  return (
-    <div className="main">
-      <div className="ccoontainer">
-        <div className="input-login">
-          <h1 className="title" style={{fontSize:"2rem"}}>Login</h1>
-          <form action="">
-            <input
-              type="text"
-              className="input"
-              placeholder="Username"
-              id="username"
-            />
-            <br />
-
-            <input
-              type="password"
-              className="input"
-              placeholder="password"
-              id="password"
-            />
-            <br />
-
-            <br />
-            <button type="button" className="btn" onclick="lgn()">
-              Login
-            </button>
-          </form>
-          <p className="log">
-            Belum mempunyai akun? <a href="/RegisPage">Buat akun</a>
-          </p>
+function Login() {
+    const signInButton = document.getElementById('signIn');
+    const main = document.getElementById('main');
+    signInButton.addEventListener('click', () =>{
+        main.classList.remove("right-panel-active");
+    })
+    return(
+        <div className='container' id='main'>
+            <div className='sign-in'>
+                <from action='#'>
+                    <h1>Login</h1>
+                    <div className='social-container'>
+                        <a href='#' className='social'><i className='fab fa-google-plus-g'></i></a>
+                        <a href='#' className='social'><i className='fab fa-linkedin-in'></i></a>
+                        <a href='#' className='social'><i className='fab fa-facebook-f☻'></i></a>
+                    </div>
+                    <p>or use your account</p>
+                    <input type='email' name='email' placeholder='Email' required=''></input>
+                    <input type='password' name='pswd' placeholder='Password' required=''></input>
+                    <button>Login</button>
+                </from>
+            </div>
+            <div className='overlay-container'>
+                <div className='overlay-right'>
+                    <h1>Hello, Friends</h1>
+                    <p>Enter your personal detail login with your personal info</p>
+                    <button id='signIn'>Sign up</button>
+                </div>
+            </div>
         </div>
-        <div className="image">
-          <img alt="" className="logoRegis" src={Def} />
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
-
-export default Register;
+export default Login()
