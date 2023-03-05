@@ -9,7 +9,7 @@ import CheckOut from './components/Page/CheckOut/CheckOut';
 import ProfilMobil from './components/Page/ProfilMobil/ProfilMobil';
 import Faq from './components/Page/Faq/Faq';
 import Testimoni from './components/Page/Testimoni/Testimoni.js';
-import Login from './components/Page/Login/Login.js';
+import Login from './components/Page/Login/login';
 import History from './components/History/History';
 
 function App() {
