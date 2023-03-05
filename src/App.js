@@ -8,6 +8,7 @@ import CarItem from './components/Page/CarItem/CarItem';
 import CheckOut from './components/Page/CheckOut/CheckOut';
 import ProfilMobil from './components/Page/ProfilMobil/ProfilMobil';
 import Faq from './components/Page/Faq/Faq';
+import History from './components/History/History';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/profilMobil" element={<ProfilMobil />} />
         <Route path="/CheckOut" element={<CheckOut />} />
         <Route path="/Faq" element={<Faq />} />
+        <Route path="/History" element={<History />} />
       </Routes>
     </BrowserRouter>
   );
