@@ -1,19 +1,19 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
-import { Card, ListGroup, Button } from 'react-bootstrap';
-import NavScroll from '../../Navbar';
-import Lower from '../../Footer';
-import './checkOut.css';
-import { carData } from '../../../data/dataMobil';
-import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { Card, ListGroup } from "react-bootstrap";
+import NavScroll from "../../Navbar";
+import Lower from "../../Footer";
+import "./checkOut.css";
+import { carData } from "../../../data/dataMobil";
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function CheckOut() {
   const [pickupDate, setPickupDate] = useState(null);
   const [returnDate, setReturnDate] = useState(null);
   const [selectedOption, setSelectedOption] = useState(carData[0].carName);
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
 
   const handlePickupDateChange = (date) => {
     setPickupDate(date);
@@ -31,16 +31,16 @@ export default function CheckOut() {
     setUsername(e.target.value);
   };
   return (
-    <>
+    <div style={{ backgroundColor: "#f0f0f0" }}>
       <NavScroll />
       <div className="conCheck d-flex">
         <h1>Check Out</h1>
         <div className="detailOrder">
           <FontAwesomeIcon icon={faInfoCircle} className="icon" />
-          {' Details Orders '}
+          {" Details Orders "}
           {carData.slice(0, 1).map((data) => {
             return (
-              <Card id={data.id} style={{ width: '22rem' }}>
+              <Card id={data.id} style={{ width: "22rem" }}>
                 <Card.Img variant="top" src={data.img} />
                 <Card.Body>
                   <Card.Title>{data.carName}</Card.Title>
@@ -63,8 +63,8 @@ export default function CheckOut() {
         </div>
         <div className="infoCheck">
           <FontAwesomeIcon icon={faInfoCircle} className="icon" />
-          {' Indormasi Sewa '}
-          <Card style={{ width: '30rem' }}>
+          {" Indormasi Sewa "}
+          <Card style={{ width: "30rem" }}>
             <Card.Body>
               <Card.Text>
                 <ListGroup variant="flush">
@@ -110,6 +110,30 @@ export default function CheckOut() {
           </Card>
         </div>
       </div>
+      <div
+        className="infoCheckout"
+        style={{
+          backgroundColor: "#c5c6d0",
+          padding: "15px",
+          width: "80%",
+          margin: "70px auto",
+          color: "black",
+          textAlign: "justify",
+          borderRadius: "15px",
+        }}
+      >
+        <FontAwesomeIcon icon={faInfoCircle} className="icon mt-5" />
+        {" Harap Dibaca"}
+        <h6 style={{ margin: "50px auto 80px auto", lineHeight: "21px" }}>
+          Syarat uang muka minimal 30% dari total harga umum diterapkan dalam
+          transaksi untuk memastikan kesiapan pembeli dan mengurangi risiko
+          pembayaran tidak tepat waktu. Jika pembeli tidak dapat atau tidak
+          bersedia memberikan uang muka minimal 30%, maka biasanya uang muka
+          yang telah diberikan sebelumnya akan hangus dan transaksi tidak dapat
+          dilanjutkan. Pesanan dianggap hangus dan penjual berhak mencari
+          pembeli lain yang bersedia memenuhi syarat tersebut.
+        </h6>
+      </div>
       <div className="confirmTabel">
         {pickupDate && returnDate && selectedOption && username && (
           <table>
@@ -121,7 +145,7 @@ export default function CheckOut() {
                 <th>Tanggal Pengembalian</th>
                 <th>Jumlah Hari</th>
                 <th>Total Harga</th>
-                <th>Jenis Pembayaran</th>
+                <th>Uang Muka (30%)</th>
               </tr>
             </thead>
             <tbody>
@@ -138,18 +162,30 @@ export default function CheckOut() {
                   ).toLocaleString()}
                 </td>
                 <td>
-                  <select id="payment-method">
-                    <option value="cash">Tunai</option>
-                    <option value="credit-card">Kartu Kredit</option>
-                    <option value="debit-card">Kartu Debit</option>
-                  </select>
+                  {Math.floor(
+                    ((returnDate - pickupDate) / (1000 * 60 * 60 * 24)) *
+                      carData.find((car) => car.carName === selectedOption)
+                        .price *
+                      0.3
+                  ).toLocaleString()}
                 </td>
               </tr>
               <tr>
-                <td colSpan="7" style={{ textAlign: 'center' }}>
-                  <Button style={{ margin: 'auto', display: 'block' }}>
-                    Konfirmasi
-                  </Button>
+                <td colSpan="7" style={{ textAlign: "center" }}>
+                  <p style={{ marginBottom: "20px" }}>
+                    Silahkan pilih metode pembayaran:
+                  </p>
+                  <div className="payButton">
+                    <button onClick={() => (window.location.href = "/History")}>
+                      <img src="./img/gpay.png" alt="Logo Transfer Bank" />
+                    </button>
+                    <button onClick={() => (window.location.href = "/History")}>
+                      <img src="./img/gpay.png" alt="Logo Transfer Bank" />
+                    </button>
+                    <button onClick={() => (window.location.href = "/History")}>
+                      <img src="./img/gpay.png" alt="Logo Transfer Bank" />
+                    </button>
+                  </div>
                 </td>
               </tr>
             </tbody>
@@ -157,6 +193,6 @@ export default function CheckOut() {
         )}
       </div>
       <Lower />
-    </>
+    </div>
   );
 }

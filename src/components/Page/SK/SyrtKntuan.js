@@ -48,6 +48,9 @@ const SyrtKntuan = () => {
                       Tidak menggunakan mobil sewaan untuk kegiatan ilegal.
                     </ListGroup.Item>
                     <ListGroup.Item>
+                    Waktu pengambilan dan pengembalian harus sesuai dengan waktu yang telah disepakati. Jika waktu pengembalian melebihi waktu yang telah disepakati, maka akan dikenakan denda.
+                    </ListGroup.Item>
+                    <ListGroup.Item>
                       Membaca dan menyetujui syarat dan ketentuan sewa mobil
                       yang diberikan oleh perusahaan.
                     </ListGroup.Item>
@@ -68,8 +71,11 @@ const SyrtKntuan = () => {
                       BPJS(Badan Penyelenggara Jaminan Sosial)
                     </ListGroup.Item>
                     <ListGroup.Item>Pasport</ListGroup.Item>
-                    <ListGroup.Item>SIM: Surat Izin Mengemudi</ListGroup.Item>
+                    <ListGroup.Item>SIM C: Surat Izin Mengemudi</ListGroup.Item>
+                    <ListGroup.Item>MWMP</ListGroup.Item>
+                    <ListGroup.Item><h3 style={{textAlign:'center'}}>Harap Menyerahkan Tiga dari persyaratan diatas</h3></ListGroup.Item>
                     <ListGroup.Item></ListGroup.Item>
+
                   </ListGroup>
                 </Card.Text>
               </Card.Body>

@@ -30,7 +30,8 @@ export default class ProfilMobil extends Component {
                     <ListGroup.Item>Jenis Bensin : {data.oil}</ListGroup.Item>
                     <ListGroup.Item>Kapasitas : {data.capacity}</ListGroup.Item>
                     <ListGroup.Item>Kecepatan : {data.speed}</ListGroup.Item>
-                    <ListGroup.Item>Harga : Rp {data.price}</ListGroup.Item>
+                    <ListGroup.Item>Harga : Rp {data.price}</ListGroup.Item> 
+                    <ListGroup.Item>Status :  {data.status}</ListGroup.Item> 
                   </ListGroup>
                 )}
               </div>

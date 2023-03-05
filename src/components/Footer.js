@@ -60,7 +60,7 @@ export default function Lower() {
             <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Menu</h6>
               <p>
-                <a href="#!" className="text-reset">
+                <a href="/CarItem" className="text-reset">
                   Order Now
                 </a>
               </p>
