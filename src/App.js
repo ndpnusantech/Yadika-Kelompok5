@@ -1,16 +1,19 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import Mainpage from "./components/Page/MainPage/MainPage";
-import EditUser from "./components/Page/EditUser/editUser";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Register from "./components/Page/RegisPage/RegisPage";
-import SyrtKntuan from "./components/Page/SK/SyrtKntuan";
-import CarItem from "./components/Page/CarItem/CarItem";
-import CheckOut from "./components/Page/CheckOut/CheckOut";
-import ProfilMobil from "./components/Page/ProfilMobil/ProfilMobil";
-import Faq from "./components/Page/Faq/Faq";
-import History from "./components/History/History";
-import Testimoni from "./components/Page/Testimoni/Testimoni.js";
-import Login from "./components/Page/Login/Login.js";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Mainpage from './components/Page/MainPage/MainPage';
+import EditUser from './components/Page/EditUser/editUser';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Register from './components/Page/RegisPage/RegisPage';
+import SyrtKntuan from './components/Page/SK/SyrtKntuan';
+import CarItem from './components/Page/CarItem/CarItem';
+import CheckOut from './components/Page/CheckOut/CheckOut';
+import ProfilMobil from './components/Page/ProfilMobil/ProfilMobil';
+import Faq from './components/Page/Faq/Faq';
+<<<<<<<<< Temporary merge branch 1
+import Testimoni from './components/Page/Testimoni/Testimoni.js';
+import Login from './components/Page/Login/Login.js';
+=========
+import History from './components/History/History';
+>>>>>>>>> Temporary merge branch 2
 
 function App() {
   return (
