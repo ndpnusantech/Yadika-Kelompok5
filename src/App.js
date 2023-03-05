@@ -8,12 +8,9 @@ import CarItem from './components/Page/CarItem/CarItem';
 import CheckOut from './components/Page/CheckOut/CheckOut';
 import ProfilMobil from './components/Page/ProfilMobil/ProfilMobil';
 import Faq from './components/Page/Faq/Faq';
-<<<<<<<<< Temporary merge branch 1
 import Testimoni from './components/Page/Testimoni/Testimoni.js';
 import Login from './components/Page/Login/Login.js';
-=========
 import History from './components/History/History';
->>>>>>>>> Temporary merge branch 2
 
 function App() {
   return (
