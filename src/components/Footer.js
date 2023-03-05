@@ -16,22 +16,22 @@ export default function Lower() {
     >
       <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <div style={{ margin: 'auto' }}>
-          <a href="" className="me-4 text-reset">
+          <a href="#!" className="me-4 text-reset">
             <MDBIcon color="secondary" fab icon="facebook-f" />
           </a>
-          <a href="" className="me-4 text-reset">
+          <a href="#!" className="me-4 text-reset">
             <MDBIcon color="secondary" fab icon="twitter" />
           </a>
-          <a href="" className="me-4 text-reset">
+          <a href="#!" className="me-4 text-reset">
             <MDBIcon color="secondary" fab icon="google" />
           </a>
-          <a href="" className="me-4 text-reset">
+          <a href="#!" className="me-4 text-reset">
             <MDBIcon color="secondary" fab icon="instagram" />
           </a>
-          <a href="" className="me-4 text-reset">
+          <a href="#!" className="me-4 text-reset">
             <MDBIcon color="secondary" fab icon="linkedin" />
           </a>
-          <a href="" className="me-4 text-reset">
+          <a href="#!" className="me-4 text-reset">
             <MDBIcon color="secondary" fab icon="github" />
           </a>
         </div>
@@ -51,6 +51,7 @@ export default function Lower() {
                     paddingRight: '5px',
                     paddingBottom: '5px',
                   }}
+                  alt=""
                 />
                 UnlimitedMovement
               </h6>
@@ -64,12 +65,12 @@ export default function Lower() {
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-reset">
+                <a href="/Login" className="text-reset">
                   Login
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-reset">
+                <a href="/RegisPage" className="text-reset">
                   Register
                 </a>
               </p>
@@ -79,8 +80,8 @@ export default function Lower() {
                 </a>
               </p>
               <p>
-                <a href="#" className="text-reset">
-                  Testimoni Kami
+                <a href="/Testimoni" className="text-reset">
+                  Testimoni
                 </a>
               </p>
             </MDBCol>

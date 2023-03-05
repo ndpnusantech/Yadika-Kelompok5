@@ -9,6 +9,9 @@ import CheckOut from './components/Page/CheckOut/CheckOut';
 import ProfilMobil from './components/Page/ProfilMobil/ProfilMobil';
 import Faq from './components/Page/Faq/Faq';
 import History from './components/History/History';
+import Testimoni from './components/Page/Testimoni/Testimoni.js';
+import Login from './components/Page/Login/Login.js';
+
 
 function App() {
   return (
@@ -23,6 +26,8 @@ function App() {
         <Route path="/CheckOut" element={<CheckOut />} />
         <Route path="/Faq" element={<Faq />} />
         <Route path="/History" element={<History />} />
+        <Route path="/Testimoni" element={<Testimoni />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
