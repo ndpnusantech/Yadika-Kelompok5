@@ -7,12 +7,14 @@ import "./checkOut.css";
 import { carData } from "../../../data/dataMobil";
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function CheckOut() {
   const [pickupDate, setPickupDate] = useState(null);
   const [returnDate, setReturnDate] = useState(null);
-  const [selectedOption, setSelectedOption] = useState(carData[0].carName);
+  const [selectedOption] = useState(carData[0].carName);
   const [username, setUsername] = useState("");
 
   const handlePickupDateChange = (date) => {
@@ -23,13 +25,20 @@ export default function CheckOut() {
     setReturnDate(date);
   };
 
-  const handleChange = (e) => {
-    setSelectedOption(e.target.value);
-  };
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
   };
+  //
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  function handleRedirect(path) {
+    window.location.href = path;
+  }
+  //
   return (
     <div style={{ backgroundColor: "#f0f0f0" }}>
       <NavScroll />
@@ -176,13 +185,35 @@ export default function CheckOut() {
                     Silahkan pilih metode pembayaran:
                   </p>
                   <div className="payButton">
-                    <button onClick={() => (window.location.href = "/History")}>
+                    <button onClick={() => {
+                          handleShow();
+                        setTimeout(() => {
+                          handleRedirect("/History");
+                      }, 6000);
+                      }}
+                      target="history">
                       <img src="./img/gpay.png" alt="Logo Transfer Bank" />
                     </button>
-                    <button onClick={() => (window.location.href = "/History")}>
+                    <button
+                      onClick={() => {
+                          handleShow();
+                        setTimeout(() => {
+                          handleRedirect("/History");
+                      }, 6000);
+                      }}
+                      target="history"
+                    >
                       <img src="./img/gpay.png" alt="Logo Transfer Bank" />
                     </button>
-                    <button onClick={() => (window.location.href = "/History")}>
+                    <button
+                      onClick={() => {
+                          handleShow();
+                        setTimeout(() => {
+                          handleRedirect("/History");
+                      }, 6000);
+                      }}
+                      target="history"
+                    >
                       <img src="./img/gpay.png" alt="Logo Transfer Bank" />
                     </button>
                   </div>
@@ -193,6 +224,32 @@ export default function CheckOut() {
         )}
       </div>
       <Lower />
+      <div className="popUp">
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header>
+            <Modal.Title>Mohon Dipahami</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            Sebelum melanjutkan, apakah Anda sudah sepenuhnya memahami
+            persyaratan dan ketentuan yang terkait dengan layanan kami?
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              variant="secondary"
+              onClick={() => {
+                window.location.href = "/SyrtKntuan";
+              }}
+            >
+              Belum
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </div>
     </div>
   );
 }
