@@ -10,7 +10,9 @@ import ProfilMobil from './components/Page/ProfilMobil/ProfilMobil';
 import Faq from './components/Page/Faq/Faq';
 import Testimoni from './components/Page/Testimoni/Testimoni.js';
 import Login from './components/Page/Login/Login.js';
-import History from './components/History/History';
+import History from './components/Page/History/History';
+import AdmLogin from './components/Page/Admin/adminLogin';
+import AdminPage from './components/Page/Admin/AdminPage';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route path="/History" element={<History />} />
         <Route path="/Testimoni" element={<Testimoni />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Adm" element={<AdmLogin />} />
+        <Route path="/dashboard" element={<AdminPage />} />
       </Routes>
     </BrowserRouter>
   );

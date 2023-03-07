@@ -1,17 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../components/css/sidebarAdm.css'
 
 export default function SidebarAdm() {
   return (
-    <div>
+    <div style={{width:'20%',height:"695px", padding: '20px'}}>
       <div
         className="sideBarAdm"
-        style={{
-          padding: "20px",
-          backgroundColor: "gray",
-          width: "20%",
-          height: "695px",
-        }}
       >
         <div className="logo">
           <img
@@ -23,7 +18,7 @@ export default function SidebarAdm() {
         <hr />
         <h2>Dashboard</h2>
         <hr />
-        <div className="pageSidebar" style={{ marginTop: "50%" }}>
+        <div className="pageSidebar"style={{marginTop:'50%'}} >
           <ul style={{ listStyle: "none" }}>
             <li>
               <hr />
