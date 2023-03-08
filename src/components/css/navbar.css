@@ -11,15 +11,9 @@
   padding: 7px 25px 15px 25px;
 }
 .Navbarr {
-<<<<<<< HEAD
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(136, 39, 39, 0.18);
-=======
-  box-shadow: 10px 10px 1px black;
-  padding-top: 2%;
-  margin-bottom: 1%;
->>>>>>> ab6795d87482eeafa8727e6f181083daec2ff421
 }
