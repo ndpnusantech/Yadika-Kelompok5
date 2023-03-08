@@ -1,18 +1,14 @@
 import { Container, Nav, Navbar, Dropdown } from 'react-bootstrap';
-import Logo from './logo.png';
-import React, { Component } from 'react';
+import React from 'react';
 import '../components/css/navbar.css';
+import Logo from './logo.png';
 
 function NavScroll() {
   return (
-    <Navbar
-      className="Navbarr"
-      style={{ backgroundColor: '#E5E5E5' }}
-      expand="lg"
-    >
+    <Navbar fixed="top" className="Navbarr" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">
-          <img src={Logo} style={{ wight: '40px', height: '40px' }} />
+          <img alt="" src={Logo} style={{ wight: '40px', height: '40px' }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Nav className="justify-content-end nav" activeKey="/home">
@@ -27,12 +23,12 @@ function NavScroll() {
           </Nav.Item>
           <Nav.Item>
             <Nav.Link
-              href="/ProfilMobil"
+              href="/CarItem"
               className="hove"
-              eventKey="RegisPage"
+              eventKey="link-3"
               style={{ color: 'black', fontSize: '20px' }}
             >
-              Rent Now
+              Daftar Mobil
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
@@ -40,8 +36,9 @@ function NavScroll() {
               className="hove"
               eventKey="link-2"
               style={{ color: 'black', fontSize: '20px' }}
+              href="/SyrtKntuan"
             >
-              Tentang
+              Syarat & Ketentuan
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
@@ -57,7 +54,7 @@ function NavScroll() {
                 style={{ transform: 'translateX(-50px)', width: '50px' }}
               >
                 <Dropdown.Item href="/RegisPage">Register</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Login</Dropdown.Item>
+                <Dropdown.Item href="/Login">Login</Dropdown.Item>
                 <Dropdown.Item href="/editUser">Edit User</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

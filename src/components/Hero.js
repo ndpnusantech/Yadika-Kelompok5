@@ -1,31 +1,30 @@
 import Carousel from 'react-bootstrap/Carousel';
-import { potoMobil } from '../data/fotoMobil';
+import { dataCaro } from '../data/dataCarousel';
 
 function CarouselSlider() {
   return (
-    <>
+    <div className="containerCaro">
       <Carousel>
-        {potoMobil.map((potoMobil) => {
+        {dataCaro.map((imgCar) => {
           return (
-            <Carousel.Item id={potoMobil.id} interval={5000}>
+            <Carousel.Item id={imgCar.id} interval={5000}>
               <img
                 className="d-flex "
-                src={potoMobil.img}
+                src={imgCar.img}
                 alt="First slide"
                 style={{
                   margin: 'auto',
                   borderRadius: '15px',
+                  paddingTop: '5%',
                   width: '100%',
-                  height: '545px',
-                  marginBottom: '3%',
-                  objectFit: 'cover',
+                  height: '695px',
                 }}
               />
             </Carousel.Item>
           );
         })}
       </Carousel>
-    </>
+    </div>
   );
 }
 

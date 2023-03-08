@@ -16,17 +16,11 @@ body {
 }
 
 .swiper {
-  border-radius: 15px;
   width: 75%;
   margin-top: 2%;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
 }
 
-.swiper-slide {
-  /* margin-top: 1%; */
+.slideImg {
   text-align: center;
   font-size: 18px;
   background: #d9d9d9;
@@ -35,7 +29,7 @@ body {
   align-items: center;
   transition: all 0.6s ease;
 }
-.swiper-slide:hover {
+.slideImg:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);

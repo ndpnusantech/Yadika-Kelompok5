@@ -1,0 +1,66 @@
+.conAdmLog {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+    max-width: 500px;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .conAdmLog h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .conAdmLog label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .conAdmLog input[type="text"],
+  .conAdmLog input[type="password"] {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .conAdmLog input[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .conAdmLog input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  .conAdmLog div {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .conAdmLog div > div {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .conAdmLog div > div:last-child {
+    margin-left: 20px;
+  }
+  .conAdmLog div > div > svg {
+    margin-right: 5px;
+  }
+  .conAdmLog div.error {
+    color: red;
+  }
+  

@@ -1,13 +1,13 @@
 import React from 'react';
-import './register.css';
 import Def from './def.png';
+import './login.css';
 
 function Register() {
   return (
     <div className="main">
-      <div className="ccontainer">
+      <div className="ccoontainer">
         <div className="input-login">
-          <h1 className="title" style={{fontSize:"2rem"}}>Register</h1>
+          <h1 className="title" style={{fontSize:"2rem"}}>Login</h1>
           <form action="">
             <input
               type="text"
@@ -16,20 +16,6 @@ function Register() {
               id="username"
             />
             <br />
-            <input
-              type="email"
-              className="input"
-              placeholder="Email"
-              id="email"
-            />
-            <br />
-            <input
-              type="number"
-              className="input"
-              placeholder="No Telp"
-              id="No Telp"
-            />
-            <br />
 
             <input
               type="password"
@@ -38,20 +24,14 @@ function Register() {
               id="password"
             />
             <br />
-            {/* <input
-              type="password"
-              className="input"
-              placeholder="password"
-              id="password"
-            /> */}
 
             <br />
-            <button type="button" className="btn" onclick="regis()">
-              Register
+            <button type="button" className="btn" onclick="lgn()">
+              Login
             </button>
           </form>
           <p className="log">
-            Sudah Punya Akun? <a href="/Login">Login</a>
+            Belum mempunyai akun? <a href="/RegisPage">Buat akun</a>
           </p>
         </div>
         <div className="image">
