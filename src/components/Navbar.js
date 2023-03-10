@@ -1,17 +1,17 @@
 import { Container, Nav, Navbar, Dropdown } from 'react-bootstrap';
 import React from 'react';
 import '../components/css/navbar.css';
-import Logo from './logo.png';
+import LogoRent from './logo.png';
 
 function NavScroll() {
   return (
     <Navbar fixed="top" className="Navbarr" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">
-          <img alt="" src={Logo} style={{ wight: '40px', height: '40px' }} />
+          <img alt="" src={LogoRent} style={{ wight: '40px', height: '30px' }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Nav className="justify-content-end nav" activeKey="/home">
+        <Nav className="justify-content-end nav mt-3" activeKey="/home">
           <Nav.Item>
             <Nav.Link
               className="hove"
@@ -51,7 +51,7 @@ function NavScroll() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu
-                style={{ transform: 'translateX(-50px)', width: '50px' }}
+              className='editUserDropdown'
               >
                 <Dropdown.Item href="/RegisPage">Register</Dropdown.Item>
                 <Dropdown.Item href="/Login">Login</Dropdown.Item>

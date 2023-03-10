@@ -12,9 +12,9 @@ export default function Lower() {
   return (
     <MDBFooter
       bgColor="light"
-      className="text-center text-lg-start text-muted mt-5"
+      className="text-center text-lg-start text-muted"
     >
-      <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+       <section className="d-flex justify-content-center justify-content-lg-between border-bottom pb-1 pt-2">
         <div style={{ margin: 'auto' }}>
           <a href="#!" className="me-4 text-reset">
             <MDBIcon color="secondary" fab icon="facebook-f" />
@@ -23,24 +23,18 @@ export default function Lower() {
             <MDBIcon color="secondary" fab icon="twitter" />
           </a>
           <a href="#!" className="me-4 text-reset">
-            <MDBIcon color="secondary" fab icon="google" />
+            <MDBIcon color="secondary" fab icon="whatsapp" />
           </a>
           <a href="#!" className="me-4 text-reset">
             <MDBIcon color="secondary" fab icon="instagram" />
           </a>
-          <a href="#!" className="me-4 text-reset">
-            <MDBIcon color="secondary" fab icon="linkedin" />
-          </a>
-          <a href="#!" className="me-4 text-reset">
-            <MDBIcon color="secondary" fab icon="github" />
-          </a>
         </div>
       </section>
 
-      <section className="">
-        <MDBContainer className="text-center text-md-start mt-5">
-          <MDBRow className="mt-3">
-            <MDBCol md="3" lg="4" xl="3" className="mx-auto mb-4">
+      <section className="mt-2 mb-1">
+        <MDBContainer className="text-center text-md-start">
+          <MDBRow className="mt-0">
+            <MDBCol md="3" lg="4" xl="3" className="mx-auto">
               <h6 className="text-uppercase fw-bold mb-4">
                 <MDBIcon color="secondary" className="me-3" />
                 <img
@@ -57,7 +51,7 @@ export default function Lower() {
               </h6>
               <p></p>
             </MDBCol>
-            <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
+            <MDBCol md="3" lg="2" xl="2" className="mx-auto">
               <h6 className="text-uppercase fw-bold mb-4">Menu</h6>
               <p>
                 <a href="/CarItem" className="text-reset">
