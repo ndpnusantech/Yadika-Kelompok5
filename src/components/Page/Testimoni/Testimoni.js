@@ -19,7 +19,7 @@ export default function Testimoni() {
         <div class="user">
             <img src={img1} alt=""/>
             <div class="info">
-                <h3>john deo</h3>
+                <h3>johen deo</h3>
                 <span>happy client</span>
             </div>
         </div>
