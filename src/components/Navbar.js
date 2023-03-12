@@ -11,7 +11,7 @@ function NavScroll() {
           <img alt="" src={LogoRent} style={{ wight: '40px', height: '30px' }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Nav className="justify-content-end nav mt-3" activeKey="/home">
+        <Nav className="justify-content-end nav mt-1" activeKey="/home">
           <Nav.Item>
             <Nav.Link
               className="hove"
@@ -56,6 +56,7 @@ function NavScroll() {
                 <Dropdown.Item href="/RegisPage">Register</Dropdown.Item>
                 <Dropdown.Item href="/Login">Login</Dropdown.Item>
                 <Dropdown.Item href="/editUser">Edit User</Dropdown.Item>
+                <Dropdown.Item href="/history">Histoty</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Nav.Item>

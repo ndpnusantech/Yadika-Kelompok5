@@ -10,6 +10,7 @@ import DatePicker from "react-datepicker";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "react-datepicker/dist/react-datepicker.css";
+import Countdown from "../../countdown";
 
 export default function CheckOut() {
   const [pickupDate, setPickupDate] = useState(null);
@@ -24,7 +25,6 @@ export default function CheckOut() {
   const handleReturnDateChange = (date) => {
     setReturnDate(date);
   };
-
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -185,21 +185,12 @@ export default function CheckOut() {
                     Silahkan pilih metode pembayaran:
                   </p>
                   <div className="payButton">
-                    <button onClick={() => {
-                          handleShow();
-                        setTimeout(() => {
-                          handleRedirect("/History");
-                      }, 6000);
-                      }}
-                      target="history">
-                      <img src="./img/gpay.png" alt="Logo Transfer Bank" />
-                    </button>
                     <button
                       onClick={() => {
-                          handleShow();
+                        handleShow();
                         setTimeout(() => {
                           handleRedirect("/History");
-                      }, 6000);
+                        }, 6000);
                       }}
                       target="history"
                     >
@@ -207,10 +198,21 @@ export default function CheckOut() {
                     </button>
                     <button
                       onClick={() => {
-                          handleShow();
+                        handleShow();
                         setTimeout(() => {
                           handleRedirect("/History");
-                      }, 6000);
+                        }, 6000);
+                      }}
+                      target="history"
+                    >
+                      <img src="./img/gpay.png" alt="Logo Transfer Bank" />
+                    </button>
+                    <button
+                      onClick={() => {
+                        handleShow();
+                        setTimeout(() => {
+                          handleRedirect("/History");
+                        }, 6000);
                       }}
                       target="history"
                     >
@@ -239,6 +241,10 @@ export default function CheckOut() {
             persyaratan dan ketentuan yang terkait dengan layanan kami?
           </Modal.Body>
           <Modal.Footer>
+            <p>
+              Anda Akan berpindah dalam
+              <Countdown />
+            </p>
             <Button
               variant="secondary"
               onClick={() => {
