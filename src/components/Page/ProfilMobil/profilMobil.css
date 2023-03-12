@@ -4,12 +4,7 @@
   margin: auto;
   margin-top: 10%;
 }
-.my-list-group {
-  margin-left: 10%;
-  width: 100%;
-  padding-top: 100px;
-  padding-left: 30px;
-}
+
 .imgMobil {
   width: 900px;
   margin-top: 20px;
@@ -46,4 +41,9 @@
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
+}
+.my-list-group {
+  border: 1px solid gray;
+  overflow: auto;
+  max-height: 300px;
 }

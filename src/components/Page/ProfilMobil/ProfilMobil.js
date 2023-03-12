@@ -1,7 +1,6 @@
 import NavScroll from '../../Navbar';
 import Lower from '../../Footer';
 import './profilMobil.css';
-import ListGroup from 'react-bootstrap/ListGroup';
 import { carData } from '../../../data/dataMobil';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
@@ -24,15 +23,51 @@ export default class ProfilMobil extends Component {
               )}
               <div>
                 {index === 0 && (
-                  <ListGroup id={data.id} className="my-list-group">
-                    <ListGroup.Item>Brand : {data.brand}</ListGroup.Item>
-                    <ListGroup.Item>Mama Mobil : {data.carName}</ListGroup.Item>
-                    <ListGroup.Item>Jenis Bensin : {data.oil}</ListGroup.Item>
-                    <ListGroup.Item>Kapasitas : {data.capacity}</ListGroup.Item>
-                    <ListGroup.Item>Kecepatan : {data.speed}</ListGroup.Item>
-                    <ListGroup.Item>Harga : Rp {data.price}</ListGroup.Item> 
-                    <ListGroup.Item>Status :  {data.status}</ListGroup.Item> 
-                  </ListGroup>
+                 <table id={data.id} className="my-list-group">
+                 <tbody>
+                   <tr>
+                     <td>Brand</td>
+                     <td>{data.brand}</td>
+                   </tr>
+                   <tr>
+                     <td>Mama Mobil</td>
+                     <td>{data.carName}</td>
+                   </tr>
+                   <tr>
+                     <td>Jenis Bensin</td>
+                     <td>{data.oil}</td>
+                   </tr>
+                   <tr>
+                     <td>Kapasitas</td>
+                     <td>{data.capacity}</td>
+                   </tr>
+                   <tr>
+                     <td>Kecepatan</td>
+                     <td>{data.speed}</td>
+                   </tr>
+                   <tr>
+                     <td>Harga</td>
+                     <td>Rp {data.price}</td>
+                   </tr>
+                   <tr>
+                     <td>Status</td>
+                     <td>{data.status}</td>
+                   </tr>
+                   <tr>
+                     <td>Gps</td>
+                     <td>{data.gps}</td>
+                   </tr>
+                   <tr>
+                     <td>Model</td>
+                     <td>{data.model}</td>
+                   </tr>
+                   <tr>
+                     <td>Kecepatan</td>
+                     <td>{data.speed}</td>
+                   </tr>
+                 </tbody>
+               </table>
+               
                 )}
               </div>
             </div>
