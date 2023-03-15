@@ -17,7 +17,7 @@ const SyrtKntuan = () => {
             ketentuan yang berlaku agar Anda dapat memahami hak dan kewajiban
             Anda sebagai pengguna.
           </h3>
-          <img style={{ height: '400px', widht: '400px' }} src={SkPng} />
+          <img style={{ height: '400px', widht: '400px' }} alt='' src={SkPng} />
         </div>
         <div className="containerSyarat">
           <h1>Ketentuan Pengguna Layanan</h1>

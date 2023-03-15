@@ -1,0 +1,48 @@
+.table-header {
+    background-color: #b3b3b3;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .table-row:hover {
+    background-color: #b3b3b3;
+  }
+  
+  
+  .table-action {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .table-action button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .table-action button:hover {
+    background-color: #c82333;
+  }
+  .headerCrud {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btn {
+    display: inline-block;
+    background-color: #777a7d;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn i {
+    margin-right: 5px;
+  }
+
+  
