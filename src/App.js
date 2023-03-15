@@ -13,6 +13,7 @@ import Login from './components/Page/Login/Login.js';
 import History from './components/Page/History/History';
 import AdmLogin from './components/Page/Admin/adminLogin';
 import AdminPage from './components/Page/Admin/AdminPage';
+import DataMobilAdm from './components/Page/Admin/DataMobilAdm';
 
 function App() {
   return (
@@ -29,8 +30,10 @@ function App() {
         <Route path="/History" element={<History />} />
         <Route path="/Testimoni" element={<Testimoni />} />
         <Route path="/Login" element={<Login />} />
+        {/* Admin */}
         <Route path="/Adm" element={<AdmLogin />} />
-        <Route path="/dashboard" element={<AdminPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/admin/dataMobil" element={<DataMobilAdm />} />
       </Routes>
     </BrowserRouter>
   );

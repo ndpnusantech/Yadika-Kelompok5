@@ -1,0 +1,11 @@
+.card-title:before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 5px;
+    background-color: #ccc;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
