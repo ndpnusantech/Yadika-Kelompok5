@@ -25,7 +25,7 @@ const AdminDashboardCard = (props) => {
           {icon}
           <h5 className="card-title ml-2">{props.title}</h5>
         </div>
-          <a href={props.link} className="stretched-link" aria-label='Read More'>.</a>
+          <a href={props.link} className="stretched-link" aria-label='Read More'>100</a>
       </div>
     </div>
   );

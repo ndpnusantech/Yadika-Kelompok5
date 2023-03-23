@@ -68,7 +68,7 @@ export default class Mainpage extends Component {
                   memberikan pengalaman bepergian terbaik bagi pelanggan kami
                 </li>
               </ul>
-              <div className="aboutImg">
+              <div className="aboutImgCar">
                 <img
                   src="./img/cars-img/tesla-model3.png"
                   style={{ height: '250px', widht: '250px' }}
