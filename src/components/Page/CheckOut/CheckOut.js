@@ -72,7 +72,7 @@ export default function CheckOut() {
         </div>
         <div className="infoCheck">
           <FontAwesomeIcon icon={faInfoCircle} className="icon" />
-          {" Indormasi Sewa "}
+          {" Informasi Sewa "}
           <Card style={{ width: "30rem" }}>
             <Card.Body>
               <Card.Text>
@@ -241,10 +241,10 @@ export default function CheckOut() {
             persyaratan dan ketentuan yang terkait dengan layanan kami?
           </Modal.Body>
           <Modal.Footer>
-            <p>
-              Anda Akan berpindah dalam
+            <div className="count d-flex">
+              <p>Anda Akan berpindah dalam</p>
               <Countdown />
-            </p>
+            </div>
             <Button
               variant="secondary"
               onClick={() => {

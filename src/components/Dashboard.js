@@ -15,7 +15,7 @@ import {
 const data = [
     { month: "Jan", pemasukan: 0, pengeluaran: 0 },
     { month: "Feb", pemasukan: 0, pengeluaran: 0 },
-    { month: "Mar", pemasukan: 750.000, pengeluaran: 0 },
+    { month: "Mar", pemasukan: 0, pengeluaran: 0 },
     { month: "Apr", pemasukan: 0, pengeluaran: 0 },
     { month: "May", pemasukan: 0, pengeluaran: 0 },
     { month: "Jun", pemasukan: 0, pengeluaran: 0 },
@@ -41,9 +41,8 @@ const useStyles = makeStyles((theme) => ({
 
 function Dashboard() {
   const classes = useStyles();
-
   return (
-    <div className={classes.root}>
+    <div className={classes.root} >
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <Paper className={classes.paper}>
@@ -54,7 +53,7 @@ function Dashboard() {
               width={500}
               height={300}
               data={data}
-              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              margin={{ top: 5, right: 90, left: 20, bottom: 5 }}
             >
               <XAxis dataKey="name" />
               <YAxis />
@@ -80,7 +79,7 @@ function Dashboard() {
               width={500}
               height={300}
               data={data}
-              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              margin={{ top: 5, right: 90, left: 20, bottom: 5 }}
             >
               <XAxis dataKey="name" />
               <YAxis />
