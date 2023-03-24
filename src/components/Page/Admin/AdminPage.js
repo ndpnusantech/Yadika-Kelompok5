@@ -3,13 +3,14 @@ import SidebarAdm from "../../SidebarAdm";
 import "../Admin/admCss/adminPage.css";
 import AdminDashboardCard from "./adminDashCardAccor";
 import Dashboard from "../../Dashboard";
+
 export default function AdminPage() {
   return (
     <div className="d-flex">
       <SidebarAdm title="Dashboard" />
       <div
         className="dasboardMain"
-        style={{ width: "calc(100% - 200px)", height: "695px" }}
+        style={{ width: "100%", height: "695px" }}
       >
         <div
           style={{
@@ -24,7 +25,7 @@ export default function AdminPage() {
         <div className="cardAdm m-auto" style={{ width: "96%" }}>
           <div className="row">
             <div className="col-md-4">
-              <AdminDashboardCard title="Mobil" link="dataMobil" />
+              <AdminDashboardCard title="Mobil" link="/admin/dataMobil" />
             </div>
             <div className="col-md-4">
               <AdminDashboardCard title="Customer" link="/transactions" />

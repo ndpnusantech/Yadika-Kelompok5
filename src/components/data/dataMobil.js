@@ -14,6 +14,8 @@ const carData = [
       ' Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.',
     plat: 'd 2142 dk',
     oil: 'Pertamax',
+    jumlahMobil:1,
+    noBPKB:612538235124014091
   },
 
   {
@@ -31,6 +33,8 @@ const carData = [
       ' Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.',
     plat: 'd 2142 dk',
     oil: 'Pertamax',
+    jumlahMobil:1,
+    noBPKB:612538235124014091
   },
   {
     id: 3,
@@ -47,6 +51,8 @@ const carData = [
       ' Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.',
     plat: 'd 2142 dk',
     oil: 'Pertamax',
+    jumlahMobil:2,
+    noBPKB:612538235124014091
   },
 
   {
@@ -64,6 +70,8 @@ const carData = [
       ' Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.',
     plat: 'd 2142 dk',
     oil: 'Pertamax',
+    jumlahMobil:1,
+    noBPKB:612538235124014091
   },
 
   {
@@ -80,6 +88,8 @@ const carData = [
       ' Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.',
     plat: 'd 2142 dk',
     oil: 'Pertamax',
+    jumlahMobil:2,
+    noBPKB:612538235124014091
   },
 
   {
@@ -97,6 +107,8 @@ const carData = [
       ' Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.',
     plat: 'd 2142 dk',
     oil: 'Pertamax',
+    jumlahMobil:1,
+    noBPKB:612538235124014091
   },
 
   {
@@ -114,6 +126,8 @@ const carData = [
       ' Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.',
     plat: 'd 2142 dk',
     oil: 'Pertamax',
+    jumlahMobil:1,
+    noBPKB:612538235124014091
   },
 
   {
@@ -131,6 +145,8 @@ const carData = [
       ' Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.',
     plat: 'd 2142 dk',
     oil: 'Pertamax',
+    jumlahMobil:2,
+    noBPKB:612538235124014091
   },
 
   {
@@ -148,6 +164,8 @@ const carData = [
       ' Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.',
     plat: 'd 2142 dk',
     oil: 'Pertamax',
+    jumlahMobil:2,
+    noBPKB:612538235124014091
   },
 ];
 
