@@ -37,10 +37,17 @@ export default class Mainpage extends Component {
             </p>
           </div>
           <div className="right">
-            <img
-              alt=""
-              src="https://telset.id/wp-content/uploads/2016/07/google-maps-new-interface1.jpg"
-            />
+          <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.87531909058!2d107.53495701389649!3d-7.023938794926424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68ed28408eab67%3A0xc39aa21e7016ed40!2sSMA%20Yadika%20Soreang!5e0!3m2!1sid!2sid!4v1679619611543!5m2!1sid!2sid"
+  width="600" 
+  height="450" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade" 
+  title='lokasi rent'
+  style={{ border: "2px solid #b7abc7s" }} 
+/>
+
           </div>
         </div>
 
