@@ -11,7 +11,10 @@ const carData = [
     automatic: 'Automatic',
     img: './img/cars-img/tesla-model3.png',
     oil: 'Pertamax',
-    status:'Tersedia'
+    status:'Tersedia',
+    plat:'D 1234 AVC',
+    jumlahMobil:'1',
+    noBPKB:2814281421894717
   },
 
   {
@@ -26,7 +29,10 @@ const carData = [
     automatic: 'Automatic',
     img: './img/cars-img/hyundai-creta.png',
     oil: 'Pertamax',
-    status:'Tersedia'
+    status:'Tersedia',
+    plat:'D 1234 AVC',
+    jumlahMobil:'1',
+    noBPKB:2814281421894717
   },
   {
     id: 3,
@@ -40,7 +46,10 @@ const carData = [
     automatic: 'Automatic',
     img: './img/cars-img/bmw-offer.png',
     oil: 'Pertamax',
-    status:'Tersedia'
+    status:'Tersedia',
+    plat:'D 1234 AVC',
+    jumlahMobil:'2',
+    noBPKB:2814281421894717
   },
 
   {
@@ -55,7 +64,10 @@ const carData = [
     automatic: 'Automatic',
     img: './img/cars-img/nissan-offer.png',
     oil: 'Pertamax',
-    status:'Tersedia'
+    status:'Tersedia',
+    plat:'D 1234 AVC',
+    jumlahMobil:'1',
+    noBPKB:2814281421894717
   },
 
   {
@@ -69,7 +81,10 @@ const carData = [
     capacity: '5 seats',
     img: './img/cars-img/offer-toyota.png',
     oil: 'Pertamax',
-    status:'Tersedia'
+    status:'Tersedia',
+    plat:'D 1234 AVC',
+    jumlahMobil:'2',
+    noBPKB:2814281421894717
   },
 
   {
@@ -84,7 +99,10 @@ const carData = [
     automatic: 'Automatic',
     img: './img/cars-img/mercedes-offer.png',
     oil: 'Pertamax',
-    status:'Tersedia'
+    status:'Tersedia',
+    plat:'D 1234 AVC',
+    jumlahMobil:'2',
+    noBPKB:2814281421894717
   },
 
   {
@@ -99,7 +117,10 @@ const carData = [
     automatic: 'Automatic',
     img: './img/cars-img/audi.png',
     oil: 'Pertamax',
-    status:'Tersedia'
+    status:'Tersedia',
+    plat:'D 1234 AVC',
+    jumlahMobil:'2',
+    noBPKB:2814281421894717
   },
 
   {
@@ -114,7 +135,10 @@ const carData = [
     automatic: 'Automatic',
     img: './img/cars-img/pajero.png',
     oil: 'Pertamax',
-    status:'Tersedia'
+    status:'Tersedia',
+    plat:'D 1234 AVC',
+    jumlahMobil:'1',
+    noBPKB:2814281421894717
   },
 
   {
@@ -129,7 +153,10 @@ const carData = [
     automatic: 'Automatic',
     img: './img/cars-img/civic.png',
     oil: 'Pertamax',
-    status:'Tersedia'
+    status:'Tersedia',
+    plat:'D 1234 AVC',
+    jumlahMobil:'2',
+    noBPKB:2814281421894717
   },
 ];
 
