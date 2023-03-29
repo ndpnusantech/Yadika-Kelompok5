@@ -226,16 +226,6 @@ export default function DataMobilAdm({ onAddCar }) {
                       onChange={(event) => setBpkb(event.target.value)}
                     />
                   </label>
-                  <label htmlFor="allCar" className="form-label">
-                    Jumlah Mobil: <br />
-                    <input
-                      type="text"
-                      id="capacity"
-                      className="form-input"
-                      value={allCar}
-                      onChange={(event) => setAllCar(event.target.value)}
-                    />
-                  </label>
                   <button
                     onClick={closeForm}
                     style={{
@@ -297,7 +287,8 @@ export default function DataMobilAdm({ onAddCar }) {
                         </button>
                         <Modal show={show} onHide={handleClose}>
                           <Modal.Body>
-                          Apakah Anda yakin ingin menghapus item ini? Tindakan ini tidak dapat dibatalkan.
+                            Apakah Anda yakin ingin menghapus item ini? Tindakan
+                            ini tidak dapat dibatalkan.
                           </Modal.Body>
                           <Modal.Footer>
                             <Button variant="secondary" onClick={handleClose}>
@@ -329,20 +320,20 @@ export default function DataMobilAdm({ onAddCar }) {
                     <div className="labelEdit d-flex">
                       <div className="mainLabel">
                         <label>
+                          Brand:{" "}
+                          <input
+                            type="text"
+                            name="brand"
+                            value={editData.brand}
+                            onChange={handleChange}
+                          />
+                        </label>
+                        <label>
                           Bpkb:
                           <input
                             type="text"
                             name="bpkb"
                             value={editData.bpkb}
-                            onChange={handleChange}
-                          />
-                        </label>
-                        <label>
-                          Kapasitas:
-                          <input
-                            type="text"
-                            name="capacity"
-                            value={editData.capacity}
                             onChange={handleChange}
                           />
                         </label>
@@ -358,29 +349,29 @@ export default function DataMobilAdm({ onAddCar }) {
                       </div>
                       <div className="mainLabel">
                         <label>
-                          Merk:
+                          Kapasitas:
                           <input
                             type="text"
-                            name="merk"
-                            value={editData.merk}
+                            name="kapasitas"
+                            value={editData.kapasitas}
                             onChange={handleChange}
                           />
-                        </label>
-                        <label>
-                          Jumalh Mobil:
-                          <input
-                            type="text"
-                            name="carAmount"
-                            value={editData.carAmount}
-                            onChange={handleChange}
-                          />
-                        </label>
+                        </label>  
                         <label>
                           Plat:
                           <input
                             type="text"
                             name="plat"
                             value={editData.plat}
+                            onChange={handleChange}
+                          />
+                        </label>
+                        <label>
+                          Bensin:
+                          <input
+                            type="text"
+                            name="fuel"
+                            value={editData.fuel}
                             onChange={handleChange}
                           />
                         </label>
