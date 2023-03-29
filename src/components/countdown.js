@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 function Countdown() {
-  const [count, setCount] = useState(6);
+  const [count, setCount] = useState(15);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -13,7 +13,7 @@ function Countdown() {
   return (
     <div>
       <h1>{count}</h1>
-      {count === 0 && <p>Happy New Year!</p>}
+      {count === 0 && <p></p>}
     </div>
   );
 }

@@ -28,7 +28,7 @@ export default function AdminPage() {
               <AdminDashboardCard title="Mobil" link="/admin/dataMobil" />
             </div>
             <div className="col-md-4">
-              <AdminDashboardCard title="Customer" link="/transactions" />
+              <AdminDashboardCard title="Customer" link="/admin/dataPenyewa" />
             </div>
             <div className="col-md-4">
               <AdminDashboardCard title="Pendapatan" link="/revenue" />

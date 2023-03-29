@@ -16,7 +16,7 @@ export default function SidebarAdm(props) {
           />
         </div>
         <hr />
-        <h2>{props.title}</h2>
+        <h3>{props.title}</h3>
         <hr />
         <div className="pageSidebar"style={{marginTop:'50%'}} >
           <ul style={{ listStyle: "none" }}>
@@ -24,11 +24,13 @@ export default function SidebarAdm(props) {
               <hr />
               <p style={{ fontSize: "12px" }}>Kelola Mobil</p>
               <Link to="/admin/dataMobil">Data Jenis Mobil</Link>
+              <br /><br />
+              <Link to="/admin/mobilTersewa">Mobil Tersewa</Link>
               <hr />
             </li>
             <li>
             <p style={{ fontSize: "12px" }}>Kelola Penyewa</p>
-              <Link to="/admin/users">Data Penyewa</Link>
+              <Link to="/admin/dataPenyewa">Data Penyewa</Link>
               <hr />
             </li>
             <li>

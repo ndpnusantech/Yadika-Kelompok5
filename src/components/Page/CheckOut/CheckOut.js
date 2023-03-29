@@ -10,7 +10,6 @@ import DatePicker from "react-datepicker";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "react-datepicker/dist/react-datepicker.css";
-import Countdown from "../../countdown";
 
 export default function CheckOut() {
   const [pickupDate, setPickupDate] = useState(null);
@@ -31,13 +30,25 @@ export default function CheckOut() {
   };
   //
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  function handleRedirect(path) {
-    window.location.href = path;
-  }
+  const [showQrModal, setShowQrModal] = useState(false);
+  const handleAgree = () => {
+    setShow(false);
+    setShowQrModal(true);
+  };
+  const [showModal, setShowModal] = useState(false);
+  const handleCloseModal = () => setShowModal(false);
+  const handleShowModal = () => setShowModal(true);
+  // Upload
+  const [file, setFile] = useState(null);
+
+  const handleFileInputChange = (event) => {
+    const file = event.target.files[0];
+    setFile(file);
+  };
+
   //
   return (
     <div style={{ backgroundColor: "#f0f0f0" }}>
@@ -181,6 +192,8 @@ export default function CheckOut() {
               </tr>
               <tr>
                 <td colSpan="7" style={{ textAlign: "center" }}>
+                  <br />
+                  <br />
                   <p style={{ marginBottom: "20px" }}>
                     Silahkan pilih metode pembayaran:
                   </p>
@@ -188,36 +201,51 @@ export default function CheckOut() {
                     <button
                       onClick={() => {
                         handleShow();
-                        setTimeout(() => {
-                          handleRedirect("/History");
-                        }, 6000);
                       }}
-                      target="history"
                     >
                       <img src="./img/gpay.png" alt="Logo Transfer Bank" />
                     </button>
-                    <button
-                      onClick={() => {
-                        handleShow();
-                        setTimeout(() => {
-                          handleRedirect("/History");
-                        }, 6000);
-                      }}
-                      target="history"
-                    >
+                    <button>
                       <img src="./img/gpay.png" alt="Logo Transfer Bank" />
                     </button>
-                    <button
-                      onClick={() => {
-                        handleShow();
-                        setTimeout(() => {
-                          handleRedirect("/History");
-                        }, 6000);
-                      }}
-                      target="history"
-                    >
+                    <button>
                       <img src="./img/gpay.png" alt="Logo Transfer Bank" />
                     </button>
+                    <br />
+                    <br />
+                    <label htmlFor="file-input" className="custom-file-upload">
+                      Upload Bukti Pembayaran
+                    </label>
+                    <input
+                      id="file-input"
+                      type="file"
+                      onChange={handleFileInputChange}
+                    />
+                    <div id="buktiImage">
+                      {file && (
+                        <img src={URL.createObjectURL(file)} alt="Preview" />
+                      )}
+                    </div>
+                    <br />
+                    <br />
+                    <Button onClick={handleShowModal}>Kirim</Button>
+
+                    <Modal
+                      show={showModal}
+                      onHide={handleCloseModal}
+                      backdrop="static"
+                      keyboard={false}
+                    >
+                      <Modal.Header closeButton>
+                        <Modal.Title>Terima Kasih</Modal.Title>
+                      </Modal.Header>
+                      <Modal.Body>Pesan telah berhasil dikirim, Tunggu dalam 60 menit untuk memproses peminjaman. </Modal.Body>
+                      <Modal.Footer>
+                        <Button variant="secondary" onClick={handleCloseModal}>
+                          Tutup
+                        </Button>
+                      </Modal.Footer>
+                    </Modal>
                   </div>
                 </td>
               </tr>
@@ -241,10 +269,20 @@ export default function CheckOut() {
             persyaratan dan ketentuan yang terkait dengan layanan kami?
           </Modal.Body>
           <Modal.Footer>
-            <div className="count d-flex">
-              <p>Anda Akan berpindah dalam</p>
-              <Countdown />
-            </div>
+            <Button
+              variant="secondary"
+              onClick={() => {
+                handleAgree();
+                setTimeout(() => {
+                  const h6Element = document.querySelector(".noteQr");
+                  if (h6Element) {
+                    h6Element.parentNode.removeChild(h6Element);
+                  }
+                }, 5000); // delay execution for 4 seconds (4000 milliseconds)
+              }}
+            >
+              Sudah
+            </Button>
             <Button
               variant="secondary"
               onClick={() => {
@@ -255,6 +293,54 @@ export default function CheckOut() {
             </Button>
           </Modal.Footer>
         </Modal>
+        {showQrModal && (
+          <Modal
+            show={showQrModal}
+            onHide={() => setShowQrModal(false)}
+            backdrop="static"
+            keyboard={false}
+            style={{
+              backgroundImage: "url('/img/qr.png')",
+              width: "400px",
+              height: "400px",
+              margin: "auto",
+              position: "absolute",
+              top: "1300px",
+              bottom: 0,
+              left: 0,
+              right: 0,
+              backgroundColor: "white",
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              borderRadius: "10px",
+              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+            }}
+          >
+            <button
+              type="button"
+              className="btn-close"
+              aria-label="Close"
+              onClick={() => {
+                setShowQrModal(false);
+              }}
+              style={{ position: "absolute", bottom: "3px", right: "5px" }}
+            ></button>
+            <h6
+              className="noteQr"
+              style={{
+                position: "absolute",
+                right: "32px",
+                backgroundColor: "rgba(0, 0, 0, 0.8)",
+                color: "white",
+                padding: "10px",
+                borderRadius: "5px",
+                textAlign: "center",
+              }}
+            >
+              silahkan scan qr code ini untuk pembayaran
+            </h6>
+          </Modal>
+        )}
       </div>
     </div>
   );
