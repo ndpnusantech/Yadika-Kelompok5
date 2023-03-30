@@ -11,9 +11,12 @@ import Faq from './components/Page/Faq/Faq';
 import Testimoni from './components/Page/Testimoni/Testimoni.js';
 import Login from './components/Page/Login/Login.js';
 import History from './components/Page/History/History';
+// 
 import AdmLogin from './components/Page/Admin/adminLogin';
 import AdminPage from './components/Page/Admin/AdminPage';
 import DataMobilAdm from './components/Page/Admin/DataMobilAdm';
+import DataPenyewa from './components/Page/Admin/DataPenyewaAdm';
+import ListMobilTersewa from './components/Page/Admin/ListMobilTersewa';
 
 function App() {
   return (
@@ -34,6 +37,8 @@ function App() {
         <Route path="/Adm" element={<AdmLogin />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/admin/dataMobil" element={<DataMobilAdm />} />
+        <Route path="/admin/dataPenyewa" element={<DataPenyewa />} />
+        <Route path="/admin/mobilTersewa" element={<ListMobilTersewa />} />
       </Routes>
     </BrowserRouter>
   );

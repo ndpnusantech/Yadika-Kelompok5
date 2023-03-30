@@ -2,15 +2,11 @@ styling for heading h1 {
   font-size: 32px;
   margin-bottom: 24px;
 }
-
-/* styling for form */
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-/* styling for input fields */
 input[type="text"] {
   padding: 8px;
   border-radius: 4px;
@@ -20,20 +16,14 @@ input[type="text"] {
   font-size: 16px;
 }
 
-/* styling for labels */
 label {
-  /* margin: 2px 0; */
   font-size: 16px;
 }
-
-/* styling for datepicker */
 .react-datepicker-wrapper,
 .react-datepicker__input-container {
   width: 100%;
   max-width: 400px;
 }
-
-/* styling for submit button */
 button[type="submit"] {
   padding: 12px 24px;
   margin-top: 16px;
@@ -46,12 +36,10 @@ button[type="submit"] {
   transition: background-color 0.2s;
 }
 
-/* styling for submit button hover effect */
 button[type="submit"]:hover {
   background-color: #0d8bf2;
 }
 
-/* styling for table */
 table {
   border-collapse: collapse;
   margin: auto;
@@ -61,7 +49,6 @@ table {
   border-bottom: solid black 1px;
 }
 
-/* styling for table header */
 th,
 td {
   text-align: left;
@@ -72,18 +59,12 @@ th {
   background-color: #2196f3;
   color: #fff;
 }
-
-/* styling for table rows */
 tbody tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-
-/* styling for table row hover effect */
 tbody tr:hover {
   background-color: #ddd;
 }
-
-/*  */
 .conCheck {
   padding-top: 7%;
   width: 85%;
@@ -123,8 +104,29 @@ tbody tr:hover {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
-.payButton button img{
-  
+.payButton button img {
   width: 80px;
   height: 80px;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.custom-file-upload:hover {
+  background-color: #e8e8e8;
+}
+
+input[type="file"] {
+  display: none;
+}
+#buktiImage img{
+  width: 200px;
+  height: 200px;
+  margin: auto;
 }
