@@ -71,7 +71,7 @@ export default function DataMobilAdm({ onAddCar }) {
   const handleDelete = (id) => {
     const newData = selectCar.filter((data) => data.id !== id);
     setSelectCar(newData);
-    console.log("click");
+    console.log("Terhapus");
   };
 
   const handleEdit = (id) => {

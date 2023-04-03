@@ -1,4 +1,5 @@
 import React from "react";
+import { Table } from "react-bootstrap";
 import SidebarAdm from "../../SidebarAdm";
 import { sewaData } from "../../../data/dataPenyewa";
 import './admCss/dataPenyewaAdm.css'
@@ -22,8 +23,8 @@ export default function DataPenyewa() {
           <h1 style={{ padding: "15px 10px" }}>Kelola Penyewa</h1>
         </div>
         <div>
-          <h4 style={{paddingLeft:'150px',paddingBottom:'50px'}}>Daftar Penyewa</h4>
-          <table className="tabSewa">
+          <h4 style={{paddingLeft:'100px',paddingBottom:'50px'}}>Daftar Penyewa</h4>
+          <Table striped bordered hover>
             <thead >
               <tr>
                 <th>ID</th>
@@ -51,7 +52,7 @@ export default function DataPenyewa() {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </Table>
         </div>
       </div>
     </div>
