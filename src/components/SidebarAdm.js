@@ -16,7 +16,7 @@ export default function SidebarAdm(props) {
           />
         </div>
         <hr />
-        <h3>{props.title}</h3>
+        <h4>{props.title}</h4>
         <hr />
         <div className="pageSidebar"style={{marginTop:'50%'}} >
           <ul style={{ listStyle: "none" }}>
