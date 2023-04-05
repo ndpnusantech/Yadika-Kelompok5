@@ -241,7 +241,7 @@ export default function CheckOut() {
                       </Modal.Header>
                       <Modal.Body>Pesan telah berhasil dikirim, Tunggu dalam 60 menit untuk memproses peminjaman. </Modal.Body>
                       <Modal.Footer>
-                        <Button variant="secondary" onClick={handleCloseModal}>
+                        <Button variant="secondary" href="/History">
                           Tutup
                         </Button>
                       </Modal.Footer>
