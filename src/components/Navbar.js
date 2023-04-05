@@ -14,7 +14,7 @@ function NavScroll() {
         <Nav className="justify-content-end nav mt-1" activeKey="/home">
           <Nav.Item>
             <Nav.Link
-              className="hove"
+              className="hove font"
               href="/"
               style={{ color: 'black', fontSize: '20px' }}
             >
@@ -24,7 +24,7 @@ function NavScroll() {
           <Nav.Item>
             <Nav.Link
               href="/CarItem"
-              className="hove"
+              className="hove font"
               eventKey="link-3"
               style={{ color: 'black', fontSize: '20px' }}
             >
@@ -33,7 +33,7 @@ function NavScroll() {
           </Nav.Item>
           <Nav.Item>
             <Nav.Link
-              className="hove"
+              className="hove font"
               eventKey="link-2"
               style={{ color: 'black', fontSize: '20px' }}
               href="/SyrtKntuan"

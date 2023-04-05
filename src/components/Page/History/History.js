@@ -19,6 +19,7 @@ export default function History() {
         <table>
           <thead>
             <tr>
+              <th>Id</th>
               <th>Nama Anda</th>
               <th>Mobil</th>
               <th>Plat</th>
@@ -26,23 +27,20 @@ export default function History() {
               <th>Tanggal Pengembalian</th>
               <th>Jumlah Hari</th>
               <th>Pembayaran Via</th>
-              <th>Uang Masuk</th>
-              <th>Sisa Tagihan</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>John</td>
-              <td>Tesla Malibu</td>
-              <td>D 1234 ABC</td>
-              <td>3/10/2023</td>
-              <td>3/11/2023</td>
-              <td>1</td>
-              <td>Dana</td>
-              <td>300,000</td>
-              <td>450,000</td>
-              <td>Proses</td>
+            <tr style={{textAlign:'center'}}>
+              <th>2167</th>
+              <th>John</th>
+              <th>Tesla Malibu</th>
+              <th>D 1234 ABC</th>
+              <th>3/10/2023</th>
+              <th>3/11/2023</th>
+              <th>1</th>
+              <th>Dana</th>
+              <th>Proses</th>
             </tr>
           </tbody>
         </table>

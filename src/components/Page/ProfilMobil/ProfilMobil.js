@@ -42,16 +42,8 @@ export default class ProfilMobil extends Component {
                      <td>{data.capacity}</td>
                    </tr>
                    <tr>
-                     <td>Kecepatan</td>
-                     <td>{data.speed}</td>
-                   </tr>
-                   <tr>
                      <td>Harga</td>
                      <td>Rp {data.price}</td>
-                   </tr>
-                   <tr>
-                     <td>Status</td>
-                     <td>{data.status}</td>
                    </tr>
                    <tr>
                      <td>Gps</td>
@@ -62,8 +54,12 @@ export default class ProfilMobil extends Component {
                      <td>{data.model}</td>
                    </tr>
                    <tr>
-                     <td>Kecepatan</td>
+                     <td>Kilo Meter Per Liter</td>
                      <td>{data.speed}</td>
+                   </tr>
+                   <tr>
+                     <td>Status</td>
+                     <td>{data.status}</td>
                    </tr>
                  </tbody>
                </table>

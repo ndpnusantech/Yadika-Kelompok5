@@ -220,6 +220,7 @@ export default function CheckOut() {
                       id="file-input"
                       type="file"
                       onChange={handleFileInputChange}
+                      style={{display: 'none'}}
                     />
                     <div id="buktiImage">
                       {file && (
@@ -229,7 +230,6 @@ export default function CheckOut() {
                     <br />
                     <br />
                     <Button onClick={handleShowModal}>Kirim</Button>
-
                     <Modal
                       show={showModal}
                       onHide={handleCloseModal}
