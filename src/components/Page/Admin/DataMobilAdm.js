@@ -122,7 +122,7 @@ export default function DataMobilAdm({ onAddCar }) {
             marginBottom: "5%",
           }}
         >
-          <h1 style={{ padding: "15px 10px" }}>Kelola Mobil</h1>
+          <h1 style={{ padding: "15px 10px",fontFamily:'sans-serif'  }}>Kelola Mobil</h1>
         </div>
         <div className="CrudData m-auto" style={{ width: "100%" }}>
           <div
@@ -146,7 +146,7 @@ export default function DataMobilAdm({ onAddCar }) {
                   className="form-container"
                   style={{ overflowX: "clip", width: "60%" }}
                 >
-                  <label htmlFor="make" className="form-label">
+                  <label htmlFor="img" className="form-label">
                     Gambar: <br />
                     <input
                       type="file"
@@ -157,6 +157,10 @@ export default function DataMobilAdm({ onAddCar }) {
                     />
                   </label>
                   <label htmlFor="model" className="form-label">
+                    Model: <br />
+                    <input type="text" id="model" className="form-input" />
+                  </label>
+                  <label htmlFor="brand" className="form-label">
                     Brand: <br />
                     <input
                       type="text"
@@ -226,6 +230,14 @@ export default function DataMobilAdm({ onAddCar }) {
                       onChange={(event) => setBpkb(event.target.value)}
                     />
                   </label>
+                  <label htmlFor="gps" className="form-label">
+                    Gps: <br />
+                    <input type="text" id="gps" className="form-input" />
+                  </label>
+                  <label htmlFor="kilometer" className="form-label">
+                    Kilometer Mobil: <br />
+                    <input type="text" id="KmCar" className="form-input" />
+                  </label>
                   <button
                     onClick={closeForm}
                     style={{
@@ -254,12 +266,16 @@ export default function DataMobilAdm({ onAddCar }) {
                 <thead className="table-header">
                   <tr>
                     <th>ID</th>
-                    <th>Merk</th>
+                    <th>Model</th>
+                    <th>Brand</th>
+                    <th>Nama Mobil</th>
                     <th>Jumlah Mobil</th>
                     <th>Nomor Plat</th>
                     <th>Nomor BPKB</th>
                     <th>Kapasitas</th>
                     <th>Harga</th>
+                    <th>Gps</th>
+                    <th>Kilometer Mobil</th>
                     <th>Status</th>
                     <th>Action</th>
                   </tr>
@@ -267,14 +283,18 @@ export default function DataMobilAdm({ onAddCar }) {
                 <tbody>
                   {selectedCars.map((data) => (
                     <tr key={data.id} className="table-row">
-                      <td>{data.id}</td>
-                      <td>{data.carName}</td>
-                      <td>{data.jumlahMobil}</td>
-                      <td>{data.plat}</td>
-                      <td>{data.noBPKB}</td>
-                      <td>{data.capacity}</td>
-                      <td>{data.price}</td>
-                      <td>{data.status}</td>
+                      <th>{data.id}</th>
+                      <th>{data.model}</th>
+                      <th>{data.brand}</th>
+                      <th>{data.carName}</th>
+                      <th>{data.jumlahMobil}</th>
+                      <th>{data.plat}</th>
+                      <th>{data.noBPKB}</th>
+                      <th>{data.capacity}</th>
+                      <th>{data.price}</th>
+                      <th>{data.gps}</th>
+                      <th>120 Km</th>
+                      <th>{data.status}</th>
                       <td className="td-admin">
                         <button
                           className="btnAc"
@@ -346,6 +366,14 @@ export default function DataMobilAdm({ onAddCar }) {
                             onChange={handleChange}
                           />
                         </label>
+                        <label>
+                          Kilometer Mobil:
+                          <input
+                            type="text"
+                            name="KmCar"
+                            onChange={handleChange}
+                          />
+                        </label>
                       </div>
                       <div className="mainLabel">
                         <label>
@@ -356,7 +384,7 @@ export default function DataMobilAdm({ onAddCar }) {
                             value={editData.kapasitas}
                             onChange={handleChange}
                           />
-                        </label>  
+                        </label>
                         <label>
                           Plat:
                           <input
@@ -372,6 +400,14 @@ export default function DataMobilAdm({ onAddCar }) {
                             type="text"
                             name="fuel"
                             value={editData.fuel}
+                            onChange={handleChange}
+                          />
+                        </label>
+                        <label>
+                          Jumlah Mobil:
+                          <input
+                            type="text"
+                            name="jmlh"
                             onChange={handleChange}
                           />
                         </label>

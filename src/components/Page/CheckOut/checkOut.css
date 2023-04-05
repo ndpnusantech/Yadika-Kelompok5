@@ -121,10 +121,6 @@ tbody tr:hover {
 .custom-file-upload:hover {
   background-color: #e8e8e8;
 }
-
-input[type="file"] {
-  display: none;
-}
 #buktiImage img{
   width: 200px;
   height: 200px;

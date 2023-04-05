@@ -20,7 +20,7 @@ export default function AdminPage() {
             marginBottom: "2%",
           }}
         >
-          <h1 style={{ padding: "15px 10px" }}>Dashboard</h1>
+          <h1 style={{ padding: "15px 10px",fontFamily:'sans-serif'  }}>Dashboard</h1>
         </div>
         <div className="cardAdm m-auto" style={{ width: "96%" }}>
           <div className="row">

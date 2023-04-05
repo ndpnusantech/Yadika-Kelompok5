@@ -27,7 +27,7 @@ const CarItem = () => {
                     <h6 className="rent-price text-center mt-">
                       {' '}
                       Rp.{price}
-                      <span>/ Jam</span>
+                      <span>/ Hari</span>
                     </h6>
 
                     <div className="car-item-info d-flex align-items-center justify-content-between mt-3 mb-4">
