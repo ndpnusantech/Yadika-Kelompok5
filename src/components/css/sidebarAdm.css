@@ -1,36 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+.sideBarAdm {
+  font-family: "Poppins", sans-serif;
+}
 .pageSidebar {
-    height: 100%;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .pageSidebar h3 {
-    font-size: 24px;
-    margin-top: 0;
-  }
-  
-  .pageSidebar ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .pageSidebar li {
-    margin-bottom: 10px;
-  }
-  
-  .pageSidebar a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .pageSidebar a:hover {
-    color: #000;
-  }
-  
-  .pageSidebar hr {
-    border: none;
-    margin: 10px 0;
-  }
-  
+  height: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  color: #333;
+}
+
+.pageSidebar h3 {
+  font-size: 28px;
+  margin-top: 0;
+}
+
+.pageSidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pageSidebar li {
+  margin-bottom: 10px;
+}
+
+.pageSidebar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.pageSidebar a:hover {
+  color: #000;
+}
+
+.pageSidebar hr {
+  border: none;
+  margin: 10px 0;
+}

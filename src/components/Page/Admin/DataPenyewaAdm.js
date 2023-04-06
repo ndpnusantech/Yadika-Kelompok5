@@ -20,7 +20,7 @@ export default function DataPenyewa() {
             marginBottom: "5%",
           }}
         >
-          <h1 style={{ padding: "15px 10px" }}>Kelola Penyewa</h1>
+          <h1 style={{ padding: "15px 10px" ,fontFamily:'sans-serif' }}>Kelola Penyewa</h1>
         </div>
         <div>
           <h4 style={{paddingLeft:'100px',paddingBottom:'50px'}}>Daftar Penyewa</h4>
