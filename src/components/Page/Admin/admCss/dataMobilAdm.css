@@ -133,12 +133,11 @@ span {
   position: absolute;
   width: 60%;
   height: 360px;
-  top: 250px;
+  top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 1;
-  pointer-events: none;
 }
 .editForm{
   border-radius: 15px;

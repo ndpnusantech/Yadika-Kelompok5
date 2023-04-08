@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import CardSlide from '../../CardSlide';
-import NavScroll from '../../Navbar';
-import CarouselSlider from '../../Hero';
-import Lower from '../../Footer';
-import { Button } from 'react-bootstrap';
+import React, { Component } from "react";
+import CardSlide from "../../CardSlide";
+import NavScroll from "../../Navbar";
+import CarouselSlider from "../../Hero";
+import Lower from "../../Footer";
+import { Button } from "react-bootstrap";
 
 // CSS
-import './mainPage.css';
+import "./mainPage.css";
 
 export default class Mainpage extends Component {
   render() {
     return (
-      <div style={{ backgroundColor: '#9A9A9A' }}>
+      <div style={{ backgroundColor: "#9A9A9A" }}>
         <NavScroll />
         <CarouselSlider />
         <div className="CardSlide">
@@ -37,27 +37,26 @@ export default class Mainpage extends Component {
             </p>
           </div>
           <div className="right">
-          <iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.87531909058!2d107.53495701389649!3d-7.023938794926424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68ed28408eab67%3A0xc39aa21e7016ed40!2sSMA%20Yadika%20Soreang!5e0!3m2!1sid!2sid!4v1679619611543!5m2!1sid!2sid"
-  width="600" 
-  height="450" 
-  allowfullscreen="" 
-  loading="lazy" 
-  referrerpolicy="no-referrer-when-downgrade" 
-  title='lokasi rent'
-  style={{ border: "2px solid #b7abc7s" }} 
-/>
-
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.87531909058!2d107.53495701389649!3d-7.023938794926424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68ed28408eab67%3A0xc39aa21e7016ed40!2sSMA%20Yadika%20Soreang!5e0!3m2!1sid!2sid!4v1679619611543!5m2!1sid!2sid"
+              width="600"
+              height="450"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="lokasi rent"
+              style={{ border: "2px solid #b7abc7s" }}
+            />
           </div>
         </div>
 
         <section className="ABOUT" id="#">
           <div className="containerAbout">
-            <h1 style={{ textAlign: 'center' }}>Tentang Kami</h1>
+            <h1 style={{ textAlign: "center" }}>Tentang Kami</h1>
             <hr />
             <div className="aboutGroup d-flex">
               <ul className="list-group">
-                <li className="list-group-item" style={{ textAlign: 'left' }}>
+                <li className="list-group-item" style={{ textAlign: "left" }}>
                   Kami adalah perusahaan rental mobil yang berdedikasi untuk
                   memberikan pengalaman bepergian yang nyaman dan mudah bagi
                   pelanggan kami. Kami memahami bahwa setiap perjalanan memiliki
@@ -66,7 +65,7 @@ export default class Mainpage extends Component {
                   dengan kebutuhan pelanggan kami.
                 </li>
                 <br />
-                <li className="list-group-item" style={{ textAlign: 'left' }}>
+                <li className="list-group-item" style={{ textAlign: "left" }}>
                   Dengan lebih dari 90 tahun pengalaman di bidang ini, kami
                   memiliki tim yang berdedikasi dan profesional yang selalu siap
                   untuk membantu pelanggan kami. Kami bangga dengan standar
@@ -78,7 +77,7 @@ export default class Mainpage extends Component {
               <div className="aboutImgCar">
                 <img
                   src="./img/cars-img/tesla-model3.png"
-                  style={{ height: '250px', widht: '250px' }}
+                  style={{ height: "250px", widht: "250px" }}
                   alt="tesla"
                 />
               </div>

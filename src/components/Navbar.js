@@ -8,10 +8,10 @@ function NavScroll() {
     <Navbar fixed="top" className="Navbarr" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">
-          <img alt="" src={LogoRent} style={{ wight: '40px', height: '30px' }} />
+          <img alt="" src={LogoRent} style={{ wight: '50px', height: '50px',marginLeft:'80px' }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Nav className="justify-content-end nav mt-1" activeKey="/home">
+        <Nav className="justify-content-end nav mt-1" style={{marginRight:'50px'}} activeKey="/home">
           <Nav.Item>
             <Nav.Link
               className="hove font"
@@ -41,8 +41,8 @@ function NavScroll() {
               Syarat & Ketentuan
             </Nav.Link>
           </Nav.Item>
-          <Nav.Item>
-            <Dropdown style={{ marginRight: '35px' }}>
+          <Nav.Item >
+            <Dropdown>
               <Dropdown.Toggle variant="Secondary" id="dropdown-basic">
                 <i
                   className="fas fa-user-circle"

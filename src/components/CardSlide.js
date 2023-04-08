@@ -25,7 +25,7 @@ export default function CardSlide() {
               <Card style={{ width: '18rem' }}>
                 <Card.Img className="slideImg" variant="top" src={data.img} />
                 <Card.Body>
-                  <Card.Title>{data.carName}</Card.Title>
+                  <Card.Title><p>{data.carName}</p></Card.Title>
                   <Button id={data.id} variant="dark" href="/ProfilMobil">
                     Details
                   </Button>
