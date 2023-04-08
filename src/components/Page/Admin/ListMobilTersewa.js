@@ -106,7 +106,7 @@ export default function ListMobilTersewa() {
                           width: "800px",
                           borderCollapse: "collapse",
                           border: "none",
-                          backgroundColor:'red'
+                          backgroundColor:'green'
                         }}
                       >
                         <tr>
