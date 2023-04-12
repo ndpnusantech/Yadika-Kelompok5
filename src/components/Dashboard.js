@@ -8,8 +8,6 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  BarChart,
-  Bar,
 } from "recharts";
 
 const data = [
@@ -44,7 +42,7 @@ function Dashboard() {
   return (
     <div className={classes.root} >
       <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={18} md={6}>
           <Paper className={classes.paper}>
             <Typography variant="h6" gutterBottom>
               Graph 1
@@ -68,27 +66,6 @@ function Dashboard() {
               />
               <Line type="monotone" dataKey="pengeluaran" stroke="#82ca9d" />
             </LineChart>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Paper className={classes.paper}>
-            <Typography variant="h6" gutterBottom>
-              Graph 2
-            </Typography>
-            <BarChart
-              width={500}
-              height={300}
-              data={data}
-              margin={{ top: 5, right: 90, left: 20, bottom: 5 }}
-            >
-              <XAxis dataKey="name" />
-              <YAxis />
-              <CartesianGrid strokeDasharray="3 3" />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="pemasukan" fill="#8884d8" />
-              <Bar dataKey="pengeluaran" fill="#82ca9d" />
-            </BarChart>
           </Paper>
         </Grid>
       </Grid>
