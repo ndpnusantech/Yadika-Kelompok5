@@ -259,7 +259,6 @@ export default function DataMobilAdm({ onAddCar }) {
                 </form>
               )}
             </div>
-
             <div
               className="crudBody table-responsive mt-5"
               style={{ width: "100%", height: "450px" }}

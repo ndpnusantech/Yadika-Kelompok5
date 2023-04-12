@@ -35,7 +35,7 @@ export default function SidebarAdm(props) {
             </li>
             <li>
             <p style={{ fontSize: "12px" }}>Pengaturan </p>
-              <Link to="/admin/products">Manajemen Laporan</Link>
+              <Link to="/admin">Dashboard</Link>
               <hr />
             </li>
           </ul>
