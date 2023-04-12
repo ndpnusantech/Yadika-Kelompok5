@@ -81,7 +81,7 @@ export default function ListMobilTersewa() {
                         style={{
                           position: "fixed",
                           top: '130px',
-                          left: '404px',
+                          left: '377px',
                           width: "800px",
                           backgroundColor: "white",
                         }}
