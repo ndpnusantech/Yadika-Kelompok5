@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "react-bootstrap";
+import { Table ,Button} from "react-bootstrap";
 import SidebarAdm from "../../SidebarAdm";
 import { sewaData } from "../../../data/dataPenyewa";
 import './admCss/dataPenyewaAdm.css'
@@ -24,6 +24,7 @@ export default function DataPenyewa() {
         </div>
         <div>
           <h4 style={{paddingLeft:'100px',paddingBottom:'50px'}}>Daftar Penyewa</h4>
+          <div className="identitasPenyewa" style={{margin:'auto',overflow: 'auto', maxWidth: '900px'}} >
           <Table striped bordered hover>
             <thead >
               <tr>
@@ -33,6 +34,7 @@ export default function DataPenyewa() {
                 <th>Email</th>
                 <th>Alamat</th>
                 <th>Status Akun</th>
+                <th>Identitas Penyewa</th>
               </tr>
             </thead>
             <tbody>
@@ -49,10 +51,12 @@ export default function DataPenyewa() {
                         <option value="tidakAktif">Tidak Aktif</option>
                     </select>
                  </th>
+                 <th><Button>Details</Button></th>
                 </tr>
               ))}
             </tbody>
           </Table>
+          </div>
         </div>
       </div>
     </div>

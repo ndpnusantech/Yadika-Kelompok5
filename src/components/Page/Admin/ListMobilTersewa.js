@@ -161,6 +161,9 @@ export default function ListMobilTersewa() {
                             />
                           </th>
                         </tr>
+                        <tr>
+                          <th colSpan={3}><Button>Lacak Mobil</Button></th>
+                        </tr>
                       </table>
                     </div>
                   )}
