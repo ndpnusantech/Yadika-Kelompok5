@@ -203,10 +203,10 @@ export default function CheckOut() {
                         handleShow();
                       }}
                     >
-                      <img src="./img/gpay.png" alt="Logo Transfer Bank" />
+                      <img src="./img/ovov.png" alt="Logo Transfer Bank" />
                     </button>
                     <button>
-                      <img src="./img/gpay.png" alt="Logo Transfer Bank" />
+                      <img src="./img/debit.png" alt="Logo Transfer Bank" />
                     </button>
                     <button>
                       <img src="./img/gpay.png" alt="Logo Transfer Bank" />

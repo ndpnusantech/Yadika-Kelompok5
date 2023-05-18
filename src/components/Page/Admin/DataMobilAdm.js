@@ -4,66 +4,19 @@ import SidebarAdm from "../../SidebarAdm";
 import "./admCss/dataMobilAdm.css";
 import { carData } from "../../../data/dataMobil";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import CarForm from "../../FormComponent";
 
-export default function DataMobilAdm({ onAddCar }) {
+export default function DataMobilAdm() {
   const [activePage, setActivePage] = useState(1);
   const itemsPerPage = 4;
-  const [showForm, setShowForm] = useState(false);
+
   const [carList] = useState(carData);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const handleButtonClick = () => {
-    setShowForm(true);
-  };
-  const [make, setMake] = useState("");
-  const [model, setModel] = useState("");
-  const [year, setYear] = useState("");
-  const [price, setPrice] = useState("");
-  const [capacity, setCapacity] = useState("");
-  const [fuel, setFuel] = useState("");
-  const [plat, setPlat] = useState("");
-  const [bpkb, setBpkb] = useState("");
-  const [allCar, setAllCar] = useState("");
-  const closeForm = () => {
-    setShowForm(false);
-    setMake("");
-    setModel("");
-    setYear("");
-    setPrice("");
-    setCapacity("");
-    setFuel("");
-    setPlat("");
-    setBpkb("");
-    setAllCar("");
-  };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const newCar = {
-      make: make,
-      model: model,
-      year: year,
-      price: price,
-      capacity: capacity,
-      fuel: fuel,
-      plat: plat,
-      bpkb: bpkb,
-      allCar: allCar,
-    };
-    onAddCar(newCar);
-    setMake("");
-    setModel("");
-    setYear("");
-    setPrice("");
-    setCapacity("");
-    setFuel("");
-    setPlat("");
-    setBpkb("");
-    setAllCar("");
-  };
   const [selectCar, setSelectCar] = useState([carData]);
   const [data, setData] = useState(carData);
   const [editData, setEditData] = useState(null);
@@ -139,125 +92,7 @@ export default function DataMobilAdm({ onAddCar }) {
               <h4 style={{ padding: "5px 0 0 0" }}>
                 Kelola <span style={{ color: "GrayText" }}>Mobil</span>
               </h4>
-              <button className="btn" onClick={handleButtonClick}>
-                Tambah Mobil
-              </button>
-              {showForm && (
-                <form
-                  onSubmit={handleSubmit}
-                  className="form-container"
-                  style={{ overflowX: "clip", width: "60%" }}
-                >
-                  <label htmlFor="img" className="form-label">
-                    Gambar: <br />
-                    <input
-                      type="file"
-                      id="img"
-                      className="form-input"
-                      value={make}
-                      onChange={(event) => setMake(event.target.value)}
-                    />
-                  </label>
-                  <label htmlFor="model" className="form-label">
-                    Model: <br />
-                    <input type="text" id="model" className="form-input" />
-                  </label>
-                  <label htmlFor="brand" className="form-label">
-                    Brand: <br />
-                    <input
-                      type="text"
-                      id="brand"
-                      className="form-input"
-                      value={model}
-                      onChange={(event) => setModel(event.target.value)}
-                    />
-                  </label>
-                  <label htmlFor="year" className="form-label">
-                    Nama Mobil: <br />
-                    <input
-                      type="text"
-                      id="carName"
-                      className="form-input"
-                      value={year}
-                      onChange={(event) => setYear(event.target.value)}
-                    />
-                  </label>
-                  <label htmlFor="price" className="form-label">
-                    Harga: <br />
-                    <input
-                      type="text"
-                      id="price"
-                      className="form-input"
-                      value={price}
-                      onChange={(event) => setPrice(event.target.value)}
-                    />
-                  </label>
-                  <label htmlFor="capacity" className="form-label">
-                    Kapasitas: <br />
-                    <input
-                      type="text"
-                      id="capacity"
-                      className="form-input"
-                      value={capacity}
-                      onChange={(event) => setCapacity(event.target.value)}
-                    />
-                  </label>
-                  <label htmlFor="fuel" className="form-label">
-                    Bensin: <br />
-                    <input
-                      type="text"
-                      id="capacity"
-                      className="form-input"
-                      value={fuel}
-                      onChange={(event) => setFuel(event.target.value)}
-                    />
-                  </label>
-                  <label htmlFor="plat" className="form-label">
-                    Plat: <br />
-                    <input
-                      type="text"
-                      id="capacity"
-                      className="form-input"
-                      value={plat}
-                      onChange={(event) => setPlat(event.target.value)}
-                    />
-                  </label>
-                  <label htmlFor="bpkb" className="form-label">
-                    No BPKB: <br />
-                    <input
-                      type="text"
-                      id="capacity"
-                      className="form-input"
-                      value={bpkb}
-                      onChange={(event) => setBpkb(event.target.value)}
-                    />
-                  </label>
-                  <label htmlFor="gps" className="form-label">
-                    Gps: <br />
-                    <input type="text" id="gps" className="form-input" />
-                  </label>
-                  <label htmlFor="kilometer" className="form-label">
-                    Kilometer Mobil: <br />
-                    <input type="text" id="KmCar" className="form-input" />
-                  </label>
-                  <button
-                    onClick={closeForm}
-                    style={{
-                      position: "absolute",
-                      top: "10px",
-                      right: "10px",
-                      background: "none",
-                      border: "none",
-                      cursor: "pointer",
-                    }}
-                  >
-                    <i className="fas fa-times"></i>
-                  </button>
-                  <button type="submit" className="form-button">
-                    Tambah Mobil
-                  </button>
-                </form>
-              )}
+             <CarForm/>
             </div>
             <div
               className="crudBody table-responsive mt-5"
@@ -307,6 +142,7 @@ export default function DataMobilAdm({ onAddCar }) {
                           className="btnAc"
                           onClick={() => handleEdit(data.id)}
                         >
+                          <CarForm button='tes'/>
                           <FaEdit />
                         </button>
                         <button className="btnAc" onClick={handleShow}>
@@ -334,114 +170,6 @@ export default function DataMobilAdm({ onAddCar }) {
                   ))}
                 </tbody>
               </Table>
-              <div>
-                {editData && (
-                  <form
-                    onSubmit={handleSave}
-                    className="form-container"
-                    style={{ width: "60%" }}
-                  >
-                    <label htmlFor="img" className="form-label">
-                      Gambar: <br />
-                      <input
-                        type="file"
-                        id="img"
-                        className="form-input"
-                        value={make}
-                        onChange={handleChange}
-                      />
-                    </label>
-                    <label htmlFor="model" className="form-label">
-                      Model: <br />
-                      <input type="text" id="model" className="form-input" />
-                    </label>
-                    <label htmlFor="brand" className="form-label">
-                      Brand: <br />
-                      <input
-                        type="text"
-                        id="brand"
-                        className="form-input"
-                        value={model}
-                        onChange={handleChange}
-                      />
-                    </label>
-                    <label htmlFor="year" className="form-label">
-                      Nama Mobil: <br />
-                      <input
-                        type="text"
-                        id="carName"
-                        className="form-input"
-                        value={year}
-                        onChange={handleChange}
-                      />
-                    </label>
-                    <label htmlFor="price" className="form-label">
-                      Harga: <br />
-                      <input
-                        type="text"
-                        id="price"
-                        className="form-input"
-                        value={price}
-                        onChange={handleChange}
-                      />
-                    </label>
-                    <label htmlFor="fuel" className="form-label">
-                      Bensin: <br />
-                      <input
-                        type="text"
-                        id="capacity"
-                        className="form-input"
-                        value={fuel}
-                        onChange={handleChange}
-                      />
-                    </label>
-                    <label htmlFor="plat" className="form-label">
-                      Plat: <br />
-                      <input
-                        type="text"
-                        id="capacity"
-                        className="form-input"
-                        value={plat}
-                        onChange={handleChange}
-                      />
-                    </label>
-                    <label htmlFor="bpkb" className="form-label">
-                      No BPKB: <br />
-                      <input
-                        type="text"
-                        id="capacity"
-                        className="form-input"
-                        value={bpkb}
-                        onChange={handleChange}
-                      />
-                    </label>
-                    <label htmlFor="gps" className="form-label">
-                      Gps: <br />
-                      <input type="text" id="gps" className="form-input" />
-                    </label>
-                    <label htmlFor="kilometer" className="form-label">
-                      Kilometer Mobil: <br />
-                      <input type="text" id="KmCar" className="form-input" />
-                    </label>
-                    <button
-                      onClick={closeForm}
-                      style={{
-                        position: "absolute",
-                        top: "10px",
-                        right: "10px",
-                        background: "none",
-                        border: "none",
-                        cursor: "pointer",
-                      }}
-                    >
-                      <i className="fas fa-times"></i>
-                    </button>
-                    <button type="submit" className="form-button">
-                      Tambah Mobil
-                    </button>
-                  </form>
-                )}
-              </div>
               <Pagination>
                 <Pagination.First
                   onClick={() => handlePageChange(1)}
