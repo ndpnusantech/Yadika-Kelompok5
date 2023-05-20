@@ -72,7 +72,7 @@ const SyrtKntuan = () => {
                     </ListGroup.Item>
                     <ListGroup.Item>Pasport</ListGroup.Item>
                     <ListGroup.Item>SIM C: Surat Izin Mengemudi</ListGroup.Item>
-                    <ListGroup.Item>MWMP</ListGroup.Item>
+                    <ListGroup.Item>NPWP</ListGroup.Item>
                     <ListGroup.Item><h3 style={{textAlign:'center'}}>Harap Menyerahkan Tiga dari persyaratan diatas</h3></ListGroup.Item>
                     <ListGroup.Item></ListGroup.Item>
 

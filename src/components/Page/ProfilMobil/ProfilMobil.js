@@ -25,6 +25,10 @@ export default class ProfilMobil extends Component {
                 {index === 0 && (
                  <table id={data.id} className="my-list-group">
                  <tbody>
+                  <tr>
+                    <td>Id</td>
+                    <td>#{data.id}</td>
+                  </tr>
                    <tr>
                      <td>Brand</td>
                      <td>{data.brand}</td>
@@ -63,7 +67,6 @@ export default class ProfilMobil extends Component {
                    </tr>
                  </tbody>
                </table>
-               
                 )}
               </div>
             </div>

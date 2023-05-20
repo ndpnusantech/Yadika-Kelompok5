@@ -45,7 +45,7 @@ function Dashboard() {
         <Grid item xs={18} md={6}>
           <Paper className={classes.paper}>
             <Typography variant="h6" gutterBottom>
-              Graph 1
+              Laporan
             </Typography>
             <LineChart
               width={500}

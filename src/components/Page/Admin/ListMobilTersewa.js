@@ -35,7 +35,9 @@ export default function ListMobilTersewa() {
             marginBottom: "5%",
           }}
         >
-          <h1 style={{ padding: "15px 10px",fontFamily:'sans-serif' }}>Mobil Tersewa</h1>
+          <h1 style={{ padding: "15px 10px", fontFamily: "sans-serif" }}>
+            Mobil Tersewa
+          </h1>
           <div style={{ width: "75%", margin: "auto" }}>
             <h4 style={{ marginBottom: "50px", marginTop: "80px" }}>
               Mobil Tersewa
@@ -81,7 +83,7 @@ export default function ListMobilTersewa() {
                         style={{
                           position: "fixed",
                           top: '130px',
-                          left: '377px',
+                          left: '404px',
                           width: "800px",
                           backgroundColor: "white",
                         }}
@@ -92,7 +94,7 @@ export default function ListMobilTersewa() {
                             border: "none",
                             fontWeight: "bold",
                             fontSize: "20px",
-                            background:'none'
+                            background: "none",
                           }}
                           onClick={handleCloseDetail}
                         >
@@ -106,7 +108,7 @@ export default function ListMobilTersewa() {
                           width: "800px",
                           borderCollapse: "collapse",
                           border: "none",
-                          backgroundColor:'green'
+                          backgroundColor: "green",
                         }}
                       >
                         <tr>
@@ -162,7 +164,10 @@ export default function ListMobilTersewa() {
                           </th>
                         </tr>
                         <tr>
-                          <th colSpan={3}><Button>Lacak Mobil</Button></th>
+                          <th colSpan={1}></th>
+                          <th colSpan={2}>
+                            <Button>Lacak Mobil</Button>
+                          </th>
                         </tr>
                       </table>
                     </div>
