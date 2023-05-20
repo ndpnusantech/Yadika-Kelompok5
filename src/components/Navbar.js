@@ -56,7 +56,7 @@ function NavScroll() {
                 <Dropdown.Item href="/RegisPage">Register</Dropdown.Item>
                 <Dropdown.Item href="/Login">Login</Dropdown.Item>
                 <Dropdown.Item href="/editUser">Edit User</Dropdown.Item>
-                <Dropdown.Item href="/history">Histoty</Dropdown.Item>
+                <Dropdown.Item href="/history">History</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Nav.Item>

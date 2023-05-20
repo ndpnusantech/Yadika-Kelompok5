@@ -82,8 +82,8 @@ export default function ListMobilTersewa() {
                         className="headDetail d-flex"
                         style={{
                           position: "fixed",
-                          top: "130px",
-                          left: "404px",
+                          top: '130px',
+                          left: '404px',
                           width: "800px",
                           backgroundColor: "white",
                         }}
