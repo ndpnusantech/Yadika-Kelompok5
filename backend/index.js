@@ -1,13 +1,11 @@
-const cors = require("cors");
-const express = require("express");
-const CarsRoute = require("./routes/carRoute.js");
+import express from 'express'
+import cors from "cors"
+import carsRouter from './routes/carsRoute.js'
 
-const app = express();
-const port = 3002;
-app.use(cors());
-app.use(express.json);
-app.use(CarsRoute);
+const app = express()
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+app.use(cors())
+app.use(express.json())
+app.use(carsRouter)
+
+app.listen(5000, ()=> console.log('Server Berjalan'))
