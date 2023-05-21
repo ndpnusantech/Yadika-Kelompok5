@@ -142,7 +142,6 @@ export default function DataMobilAdm() {
                           className="btnAc"
                           onClick={() => handleEdit(data.id)}
                         >
-                          <CarForm button='tes'/>
                           <FaEdit />
                         </button>
                         <button className="btnAc" onClick={handleShow}>
