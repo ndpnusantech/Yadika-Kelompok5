@@ -1,22 +1,21 @@
-const Sequelize = require('sequelize')
-const db = require("../config/databaseRent.js");
-
+import { Sequelize } from "sequelize";
+import db from "../config/RentDb.js";
 
 const { DataTypes } = Sequelize;
 
-const Car = db.define(
-  "cars",
+const Cars = db.define(
+  "cars_profile",
   {
     id_img: DataTypes.INTEGER,
     color: DataTypes.STRING,
     car_name: DataTypes.STRING,
     car_brand: DataTypes.STRING,
     plat: DataTypes.STRING,
+    gps: DataTypes.STRING,
     km_liter: DataTypes.STRING,
     model: DataTypes.STRING,
     price: DataTypes.FLOAT,
     fuel: DataTypes.STRING,
-    gps: DataTypes.STRING,
     status: DataTypes.BOOLEAN,
   },
   {
@@ -24,8 +23,8 @@ const Car = db.define(
   }
 );
 
+export default Cars;
+
 (async () => {
   await db.sync();
 })();
-
-module.exports = Car;
