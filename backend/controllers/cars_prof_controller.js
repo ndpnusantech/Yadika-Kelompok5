@@ -1,6 +1,6 @@
 import Cars from "../models/carModel.js";
 
-export const getCars = async (req, res) => {
+export const getCarsProf = async (req, res) => {
   try {
     const response = await Cars.findAll();
     res.status(200).json(response);
@@ -10,7 +10,7 @@ export const getCars = async (req, res) => {
   }
 };
 
-export const getCarsById = async (req, res) => {
+export const getCarsProfById = async (req, res) => {
   try {
     const response = await Cars.findOne({
       where: {
@@ -29,7 +29,7 @@ export const getCarsById = async (req, res) => {
   }
 };
 
-export const createCars = async (req, res) => {
+export const createCarsProf = async (req, res) => {
   try {
     await Cars.create(req.body);
     res.status(201).json({ msg: "Car created" });
@@ -39,7 +39,7 @@ export const createCars = async (req, res) => {
   }
 };
 
-export const updateCars = async (req, res) => {
+export const updateCarsProf = async (req, res) => {
   try {
     const car = await Cars.findOne({
       where: {
@@ -63,7 +63,7 @@ export const updateCars = async (req, res) => {
   }
 };
 
-export const deleteCars = async (req, res) => {
+export const deleteCarsProf = async (req, res) => {
   try {
     const car = await Cars.findOne({
       where: {
