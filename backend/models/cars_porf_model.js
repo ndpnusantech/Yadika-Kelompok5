@@ -3,7 +3,7 @@ import db from "../config/RentDb.js";
 
 const { DataTypes } = Sequelize;
 
-const Cars = db.define(
+const CarsProf = db.define(
   "cars_profile",
   {
     id_img: DataTypes.INTEGER,
@@ -23,7 +23,7 @@ const Cars = db.define(
   }
 );
 
-export default Cars;
+export default CarsProf;
 
 (async () => {
   await db.sync();
