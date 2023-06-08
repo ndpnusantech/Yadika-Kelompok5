@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import carsRouter from './routes/cars_prof_route.js';
+import usersRouter from './routes/users_route.js';
 import fileUpload from "express-fileupload";
 // Router Img
 import imgAboveRouter from './routes/cars_img_routes/img_above.js'
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use(fileUpload());
 app.use(express.static("public"));
 app.use(carsRouter);
+app.use(usersRouter);
 // Img Router
 app.use(imgAboveRouter);
 app.use(imgBesideRouter);
