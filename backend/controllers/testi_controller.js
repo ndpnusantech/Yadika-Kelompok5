@@ -43,7 +43,7 @@ export const getAllTestimonials = async (req, res) => {
       if (testimonial) {
         testimonial.testi_message = testi_message;
         await testimonial.save();
-        res.json(testimonial);
+        res.json({ message: 'Testimonial berhasil diperbarui.' });
       } else {
         res.status(404).json({ message: 'Testimoni tidak ditemukan.' });
       }
@@ -51,6 +51,7 @@ export const getAllTestimonials = async (req, res) => {
       res.status(500).json({ message: 'Terjadi kesalahan saat memperbarui testimoni.' });
     }
   };
+  
   
   // Menghapus testimoni berdasarkan ID
   export const deleteTestimonial = async (req, res) => {

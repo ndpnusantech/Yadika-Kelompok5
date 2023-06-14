@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import carsRouter from './routes/cars_prof_route.js';
+import usersRouter from './routes/users_route.js';
 import fileUpload from "express-fileupload";
 import carsImgRoute from './routes/cars_img_route.js'
 import testiRoute from './routes/testi_route.js'
@@ -14,6 +15,7 @@ app.use(express.static("public"));
 app.use(carsRouter);
 app.use(carsImgRoute)
 app.use(testiRoute)
+app.use(usersRouter)
 
 
 app.listen(5000, () => console.log('Server Berjalan'));
