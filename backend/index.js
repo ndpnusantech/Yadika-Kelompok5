@@ -3,11 +3,8 @@ import cors from 'cors';
 import carsRouter from './routes/cars_prof_route.js';
 import usersRouter from './routes/users_route.js';
 import fileUpload from "express-fileupload";
-// Router Img
-import imgAboveRouter from './routes/cars_img_routes/img_above.js'
-import imgBesideRouter from './routes/cars_img_routes/img_beside.js'
-import imgUnderRouter  from './routes/cars_img_routes/img_under.js'
-import imgFrontRouter from './routes/cars_img_routes/img_front.js'
+import carsImgRoute from './routes/cars_img_route.js'
+import testiRoute from './routes/testi_route.js'
 
 const app = express();
 
@@ -16,11 +13,9 @@ app.use(express.json());
 app.use(fileUpload());
 app.use(express.static("public"));
 app.use(carsRouter);
-app.use(usersRouter);
-// Img Router
-app.use(imgAboveRouter);
-app.use(imgBesideRouter);
-app.use(imgUnderRouter );
-app.use(imgFrontRouter);
+app.use(carsImgRoute)
+app.use(testiRoute)
+app.use(usersRouter)
+
 
 app.listen(5000, () => console.log('Server Berjalan'));

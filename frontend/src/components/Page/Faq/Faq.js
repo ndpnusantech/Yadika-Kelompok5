@@ -9,8 +9,9 @@ const Faq = () => {
   return (
       <>
     <NavScroll/>
-    <div className="FaqContainer">
+    <div className="mainCon">
 
+    <div className="FaqContainer">
     <FaqAcor title="Apa yang harus saya periksa sebelum menyewa mobil?" content='Pastikan untuk memeriksa kondisi mobil, termasuk ketersediaan bahan bakar, kerusakan, dan segala hal yang diperlukan seperti sistem AC, kaca depan, dan lampu.' />
     <FaqAcor title='Berapa biaya sewa mobil per hari?' content='Biaya sewa mobil bervariasi tergantung pada jenis mobil, lama waktu sewa, dan wilayah penyewaan. Namun, biaya rata-rata untuk mobil ekonomi sekitar Rp600.000 - Rp1.000.000 per hari.' />
     <FaqAcor title='Apakah saya perlu membeli asuransi tambahan untuk mobil sewaan?' content='Pilihan untuk membeli asuransi tambahan biasanya tersedia saat Anda menyewa mobil. Meskipun tidak wajib, sangat disarankan untuk membeli asuransi tambahan untuk melindungi Anda dari risiko yang tidak terduga seperti kerusakan mobil atau kecelakaan.' />
@@ -18,6 +19,7 @@ const Faq = () => {
     </div>
     
     <Lower/>
+    </div>
       </>
   );
 };
