@@ -40,7 +40,7 @@ export const createCarsProf = async (req, res) => {
     if (!car_brand) missingFields.push("car_brand");
     if (!plat) missingFields.push("plat");
     if (!gps) missingFields.push("gps");
-    if (!km_liter) missingFields.push("km_liter");
+    if (!km_liter) missingFields.push("km_liter");  
     if (!model) missingFields.push("model");
     if (!price) missingFields.push("price");
     if (!fuel) missingFields.push("fuel");
