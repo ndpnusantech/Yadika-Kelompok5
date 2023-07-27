@@ -5,6 +5,7 @@ import usersRouter from './routes/users_route.js';
 import fileUpload from "express-fileupload";
 import carsImgRoute from './routes/cars_img_route.js'
 import testiRoute from './routes/testi_route.js'
+import s_k from './routes/s&k_route.js'
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(carsRouter);
 app.use(carsImgRoute)
 app.use(testiRoute)
 app.use(usersRouter)
+app.use(s_k)
 
 
 app.listen(5000, () => console.log('Server Berjalan'));

@@ -41,7 +41,6 @@ export const saveCarsImg = async (req, res) => {
             return res.status(422).json({ msg: "Invalid Images" });
         if (file_sizeAbove > 5000000)
             return res.status(422).json({ msg: "Image must be less than 5 MB" });
-
         await img_above.mv(`./public/images/${file_name_above}`);
 
         // Process "img_under"
@@ -55,7 +54,6 @@ export const saveCarsImg = async (req, res) => {
             return res.status(422).json({ msg: "Invalid Images" });
         if (file_size_under > 5000000)
             return res.status(422).json({ msg: "Image must be less than 5 MB" });
-
         await img_under.mv(`./public/images/${file_name_under}`);
 
         // Process "img_front"
@@ -71,6 +69,7 @@ export const saveCarsImg = async (req, res) => {
             return res.status(422).json({ msg: "Image must be less than 5 MB" });
 
         await img_front.mv(`./public/images/${file_name_front}`);
+
         // Process "img_beside"
         const img_beside = req.files.img_beside;
         const file_size_beside = img_beside.data.length;
