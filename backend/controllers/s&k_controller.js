@@ -83,22 +83,6 @@ export const createS_K = async (req, res) => {
             return res.status(422).json({ msg: "Image must be less than 5 MB" });
         await img_mwmp.mv(`./public/images/${file_name_mwmp}`);
         
-        // sim
-        const img_sim = req.files.sim;
-        const file_sizesim = img_sim.data.length;
-        const ext_sim = path.extname(img_sim.name);
-        const file_name_sim = img_sim.md5 + ext_sim;
-        const img_sim_url = `${req.protocol}://${req.get("host")}/images/${file_name_sim}`;
-        if (!allowedType.includes(ext_sim.toLowerCase()))
-            return res.status(422).json({ msg: "Invalid Images" });
-        if (file_sizesim > 5000000)
-            return res.status(422).json({ msg: "Image must be less than 5 MB" });
-        await img_sim.mv(`./public/images/${file_name_sim}`);
-
-
-
-
-
         await s_k.create({
             id_user: id_user,
             ktp: file_name_ktp,
@@ -109,8 +93,6 @@ export const createS_K = async (req, res) => {
             pasport_url: img_pasport_url,
             mwmp: file_name_mwmp,
             mwmp_url: img_mwmp_url,
-            sim: file_name_sim,
-            sim_url: img_sim_url,
         })
         res.status(201).json({ msg: "Images Created Successfully" });
     } catch (error) {

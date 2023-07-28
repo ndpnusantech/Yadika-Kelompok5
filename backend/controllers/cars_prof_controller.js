@@ -1,8 +1,14 @@
 import CarsProf from "../models/cars_porf_model.js";
+import CarsImg from "../models/img_cars_model.js";
 
 export const getCarsProf = async (req, res) => {
   try {
-    const response = await CarsProf.findAll();
+    const response = await CarsProf.findAll({
+      include: {
+        model: CarsImg,
+        as: "car_image",
+      },
+    });
     res.status(200).json(response);
   } catch (error) {
     console.log(error.message);
@@ -12,114 +18,139 @@ export const getCarsProf = async (req, res) => {
 
 export const getCarsProfById = async (req, res) => {
   try {
+    const carId = req.params.id;
     const response = await CarsProf.findOne({
-      where: {
-        id: req.params.id,
-      },
+      where: { id: carId },
+      include: { model: CarsImg, as: "car_image" },
     });
 
     if (response) {
       res.status(200).json(response);
     } else {
-      res.status(404).json({ error: "Car not found" });
+      res.status(404).json({ error: "Mobil tidak ditemukan" });
     }
   } catch (error) {
     console.log(error.message);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error: "Terjadi kesalahan server" });
   }
 };
 
 export const createCarsProf = async (req, res) => {
   try {
-    const { id_img, color, car_name, car_brand, plat, gps, km_liter, model, price, fuel, status } = req.body;
-    const missingFields = [];
+    const {
+      id_img,
+      color,
+      car_name,
+      car_brand,
+      plat,
+      gps,
+      km_liter,
+      model,
+      price,
+      fuel,
+      status,
+    } = req.body;
 
-    if (!id_img) missingFields.push("id_img");
-    if (!color) missingFields.push("color");
-    if (!car_name) missingFields.push("car_name");
-    if (!car_brand) missingFields.push("car_brand");
-    if (!plat) missingFields.push("plat");
-    if (!gps) missingFields.push("gps");
-    if (!km_liter) missingFields.push("km_liter");  
-    if (!model) missingFields.push("model");
-    if (!price) missingFields.push("price");
-    if (!fuel) missingFields.push("fuel");
-    if (status === undefined) missingFields.push("status");
-
-    if (missingFields.length > 0) {
-      res.status(400).json({ error: `Missing required fields: ${missingFields.join(", ")}` });
-    } else {
-      await CarsProf.create(req.body);
-      res.status(201).json({ msg: "Car created" });
+    if (
+      !id_img ||
+      !color ||
+      !car_name ||
+      !car_brand ||
+      !plat ||
+      !gps ||
+      !km_liter ||
+      !model ||
+      !price ||
+      !fuel ||
+      status === undefined
+    ) {
+      return res.status(400).json({
+        error: "Kolom wajib kosong: id_img, color, car_name, car_brand, plat, gps, km_liter, model, price, fuel, status",
+      });
     }
+
+    await CarsProf.create({
+      id_img,
+      color,
+      car_name,
+      car_brand,
+      plat,
+      gps,
+      km_liter,
+      model,
+      price,
+      fuel,
+      status,
+    });
+
+    res.status(201).json({ msg: "Mobil berhasil dibuat" });
   } catch (error) {
     console.log(error.message);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error: "Terjadi kesalahan server" });
   }
 };
+
 export const updateCarsProf = async (req, res) => {
   try {
     const { id_img, color, car_name, car_brand, plat, gps, km_liter, model, price, fuel, status } = req.body;
-    const missingFields = [];
 
-    if (!id_img) missingFields.push("id_img");
-    if (!color) missingFields.push("color");
-    if (!car_name) missingFields.push("car_name");
-    if (!car_brand) missingFields.push("car_brand");
-    if (!plat) missingFields.push("plat");
-    if (!gps) missingFields.push("gps");
-    if (!km_liter) missingFields.push("km_liter");
-    if (!model) missingFields.push("model");
-    if (!price) missingFields.push("price");
-    if (!fuel) missingFields.push("fuel");
-    if (status === undefined) missingFields.push("status");
-
-    if (missingFields.length > 0) {
-      res.status(400).json({ error: `Missing required fields: ${missingFields.join(", ")}` });
-    } else {
-      const car = await CarsProf.findOne({
-        where: {
-          id: req.params.id,
-        },
+    if (
+      !id_img ||
+      !color ||
+      !car_name ||
+      !car_brand ||
+      !plat ||
+      !gps ||
+      !km_liter ||
+      !model ||
+      !price ||
+      !fuel ||
+      status === undefined
+    ) {
+      return res.status(400).json({
+        error: "Kolom wajib kosong: id_img, color, car_name, car_brand, plat, gps, km_liter, model, price, fuel, status",
       });
-
-      if (car) {
-        await CarsProf.update(req.body, {
-          where: {
-            id: req.params.id,
-          },
-        });
-        res.status(200).json({ msg: "Car updated" });
-      } else {
-        res.status(404).json({ error: "Car not found" });
-      }
     }
+
+    const car = await CarsProf.findByPk(req.params.id);
+
+    if (!car) {
+      return res.status(404).json({ error: "Mobil tidak ditemukan" });
+    }
+
+    await car.update({
+      id_img,
+      color,
+      car_name,
+      car_brand,
+      plat,
+      gps,
+      km_liter,
+      model,
+      price,
+      fuel,
+      status,
+    });
+
+    res.status(200).json({ msg: "Mobil berhasil diperbarui" });
   } catch (error) {
     console.log(error.message);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error: "Terjadi kesalahan server" });
   }
 };
 
 export const deleteCarsProf = async (req, res) => {
   try {
-    const car = await CarsProf.findOne({
-      where: {
-        id: req.params.id,
-      },
-    });
+    const car = await CarsProf.findByPk(req.params.id);
 
-    if (car) {
-      await CarsProf.destroy({
-        where: {
-          id: req.params.id,
-        },
-      });
-      res.status(200).json({ msg: "Car deleted" });
-    } else {
-      res.status(404).json({ error: "Car not found" });
+    if (!car) {
+      return res.status(404).json({ error: "Mobil tidak ditemukan" });
     }
+
+    await car.destroy();
+    res.status(200).json({ msg: "Mobil berhasil dihapus" });
   } catch (error) {
     console.log(error.message);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error: "Terjadi kesalahan server" });
   }
 };

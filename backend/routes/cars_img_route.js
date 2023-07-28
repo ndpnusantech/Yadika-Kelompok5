@@ -3,7 +3,7 @@ import { getCarsImg, saveCarsImg, updateCarsImg, deleteCarsImg, getCarsImgById }
 
 const router = express.Router();
 
-router.get("/http://localhost:5000carsImg", getCarsImg);
+router.get("/carsImg", getCarsImg);
 router.get("/carsImg/:id", getCarsImgById);
 router.post("/carsImg", saveCarsImg);
 router.patch("/carsImg/:id", updateCarsImg);

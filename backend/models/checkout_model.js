@@ -1,5 +1,6 @@
 import { Sequelize, DataTypes } from 'sequelize';
 import db from "../config/RentDb.js";
+import CarsProf from './cars_porf_model.js';
 
 const Checkout = db.define('checkouts', {
   check_id: {
@@ -54,8 +55,10 @@ const Checkout = db.define('checkouts', {
   statusPemesanan: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
-    defaultValue: false // Nilai default untuk status pemesanan
+    defaultValue: false
   }
 });
+
+Checkout.belongsTo(CarsProf, { foreignKey: 'profilMobil_id', as: 'mobil_profile' });
 
 export default Checkout;
